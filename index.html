@@ -15,29 +15,9 @@
             integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <!-- Devicon: Programming languages icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-        <script type = "text/javascript">
-            function displayNextImage() {
-                x = (x === images.length - 1) ? 0 : x + 1;
-                document.getElementById("img").src = images[x];
-            }
-
-            function displayPreviousImage() {
-                x = (x <= 0) ? images.length - 1 : x - 1;
-                document.getElementById("img").src = images[x];
-            }
-
-            function startTimer() {
-                setInterval(displayNextImage, 3000);
-            }
-
-            var images = [], x = -1;
-            images[0] = "profile_picture.jpg";
-            images[1] = "joat.jpg";
-            images[2] = "timestamp.png";
-        </script>
     </head>
 
-    <body onload="startTimer()">
+    <body>
         <nav class="navbar navbar-dark navbar-expand-lg bg-dark ">
             <div class="container-fluid">
                 <div class="mx-4">
@@ -74,8 +54,6 @@
             <div class="row justify-content-center">
                 <div class="col-lg mb-lg-4">
                     <img src="profile_picture.jpg" class="img-fluid" alt="" srcset="">
-                    <button type="button" onclick="displayPreviousImage()">Previous</button>
-                    <button type="button" onclick="displayNextImage()">Next</button>
                 </div>
                 <div class="col-lg mx-2 align-self-center">
                     <div class="my-3">
