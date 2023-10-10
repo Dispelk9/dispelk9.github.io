@@ -5,6 +5,15 @@
     body{
         background-color: grey;
     }
+    /* change transition duration to control the speed of fade effect */
+    .carousel-item {
+        transition: transform 2.6s ease-in-out;
+    }
+  
+    .carousel-fade .active.carousel-item-start,
+    .carousel-fade .active.carousel-item-end {
+        transition: opacity 0s 2.6s;
+    }
 
 </style>
     <head>
