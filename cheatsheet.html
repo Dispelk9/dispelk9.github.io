@@ -59,7 +59,7 @@
                         <div class="text-center">
                             <figure class="figure">
                                 <img src="cheatsheet1.jpg" class="img-fluid" alt="" srcset="">
-                                <figcaption class="figure-caption">Do you get it? Source:Geek and Poke</figcaption>
+                                <figcaption class="figure-caption">Do you get it? Source: Geek and Poke</figcaption>
                             </figure>
                         </div>
                         <h1 class="text-center">Documentation</h1>
@@ -80,51 +80,69 @@
                 <div class="col-lg mx-2 align-self-center">
                     <div class="my-3">
                         <h6 class="text-left">Git</h6>
-                            <div class="alert alert-info" role="alert">
-                                <p align="justify">
-                                    see local branches<br/>
+                            <p align="justify">
+                                see local branches<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>git branch</code><br/>
-                                    see remote branches<br/>
+                                </div>
+                                see remote branches<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>git branch -r</code><br/>
-                                    delete a remote branch
+                                </div>
+                                delete a remote branch<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>git push origin --delete my-branch-name</code><br/>
-                                    delete a local branch<br/>
-                                    note: The -d option only deletes the branch if it has already been merged.<br/>
-                                    The -D option is a shortcut for --delete --force, which deletes the branch irrespective of its merged status.<br/>
+                                </div>   
+                                delete a local branch<br/>
+                                note: The -d option only deletes the branch if it has already been merged.<br/>
+                                The -D option is a shortcut for --delete --force, which deletes the branch irrespective of its merged status.<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>
-                                    git branch -d my-branch-name<br/>
-                                    git branch -D my-branch-name<br/>
+                                        git branch -d my-branch-name<br/>
+                                        git branch -D my-branch-name<br/>
                                     </code>
-                                    change editor of git to vim<br/>
+                                </div>
+                                change editor of git to vim<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>git config --global core.editor "vim"</code><br/>
-                                    check timestamp<br/>
+                                </div>
+                                check timestamp<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>git blame</code><br/>
-                                    amend specific commit<br/>
+                                </div>
+                                amend specific commit<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>
                                         git rebase -i HEAD~3 for 3 latest commit<br/>
                                         change to e(edit)<br/>
                                         git commit --amend<br/>
                                         git rebase --continue<br/>  
                                     </code>
-                                    undo the merge<br/>
+                                </div>
+                                undo the merge<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>
-                                        git merge --abort
-                                        git reset --merge
+                                        git merge --abort<br/>
+                                        git reset --merge<br/>
                                     </code>
-                                    reset changes<br/>  
+                                </div>
+                                reset changes<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>
-                                        git reset .
-                                        git restore .
+                                        git reset .<br/>
+                                        git restore .<br/>
                                     </code>
-                                    cherry pick the commits<br/>
+                                </div>
+                                cherry pick the commits<br/>
+                                go to production -> active branch<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>
-                                        go to production -> active branch<br/>
                                         git cherry pick commit<br/>
-                                        commit from branch test<br/>
-                                        git push to create merge request<br/>
                                     </code>
-                                </p>
-                            </div>
+                                </div>
+                                commit from branch test<br/>
+                                git push to create merge request<br/>
+                            </p>
                         <h6 class="text-left">Vi/Vim (incase you aren't nanoboy)</h6>
                             <div class="alert alert-info" role="alert">
                                 <p align="justify">
@@ -179,33 +197,47 @@
                                 </p>
                             </div>
                         <h6 class="text-left">Misc.</h6>
-                        <div class="alert alert-info" role="alert">
                             <p align="justify">
                                 Right click paste in vim<br/>
-                                <code>:set mouse=</code><br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>:set mouse=</code><br/>
+                                </div>
                                 find diff two files and grep the difference<br/>
-                                <code>diff -c file1 file2| grep -E '^\+ ' >> file_diff</code><br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>diff -c file1 file2| grep -E '^\+ ' >> file_diff</code><br/>
+                                </div>
                                 find size all file in a folder<br/>
-                                <code>du -sh *</code><br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>du -sh *</code><br/>
+                                </div>
                                 check diskspace<br/>
-                                <code>df -h</code>
+                                <div class="alert alert-info" role="alert">
+                                    <code>df -h</code><br/>
+                                </div>
                                 gen key and put public key on Gitlab<br/>
-                                <code>
-                                    ssh-keygen<br/>
-                                    eval "$(ssh-agent -s)"<br/>
-                                    ssh-add private_key<br/>
-                                    add public_key on Gitlab<br/>
-                                    git clone remote_repo<br/>
-                                </code>
+                                note: add public_key on Gitlab<br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>
+                                        ssh-keygen<br/>
+                                        eval "$(ssh-agent -s)"<br/>
+                                        ssh-add private_key<br/>
+                                        git clone remote_repo<br/>
+                                    </code>
+                                </div>
                                 Profiling to optimize app runtime<br/>
-                                <code>python -m cProfile pre-commit.py -s cummulative pre-commit.py</code><br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>python -m cProfile pre-commit.py -s cummulative pre-commit.py</code><br/>
+                                </div>
                                 Find files<br/>
-                                note: add -delete to delete the found files
-                                <code>find . -name "*.bak" -type f</code>
+                                note: add -delete to delete the found files<br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>find . -name "*.bak" -type f</code>
+                                </div>
                                 Zip files then delete<br/>
-                                <code>find . -mtime +67 -type f | grep name_file | xargs tar -czvf zipped_file.tar --remove-files</code><br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>find . -mtime +67 -type f | grep name_file | xargs tar -czvf zipped_file.tar --remove-files</code><br/>
+                                </div>
                             </p>
-                        </div>
                     </div>
                 </div>
             </div>
