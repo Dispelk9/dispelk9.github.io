@@ -79,7 +79,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg mx-2 align-self-center">
                     <div class="my-3">
-                        <h6 class="text-left">Git</h6>
+                        <h5 class="text-left">Git</h5>
                             <p align="justify">
                                 see local branches<br/>
                                 <div class="alert alert-info" role="alert">
@@ -143,60 +143,71 @@
                                 commit from branch test<br/>
                                 git push to create merge request<br/>
                             </p>
-                        <h6 class="text-left">Vi/Vim (incase you aren't nanoboy)</h6>
-                            <div class="alert alert-info" role="alert">
+                        <h5 class="text-left">Vi/Vim (incase you aren't nanoboy)</h5>
                                 <p align="justify">
                                     remove empty lines<br/>
-                                    <code>:g/^$/d</code><br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>:g/^$/d</code><br/>
+                                    </div>
                                     remove line with "text"<br/>
-                                    <code>:g/text/d</code><br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>:g/text/d</code><br/>
+                                    </div>
                                     remove line with ./<br/>
-                                    <code>:g/\.\//d</code><br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>:g/\.\//d</code><br/>
+                                    </div>
                                     remove all lines not contain foo<br/>
-                                    <code>:g!/foo/d</code><br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>:g!/foo/d</code><br/>
+                                    </div>
                                     remove unwanted space in vim<br/>
-                                    <code>:%s/\s\+$//e</code><br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>:%s/\s\+$//e</code><br/>
+                                    </div>
                                     search and replace with range from line 8 to 10(Note: ^I = Tab)<br/>
-                                    <code>:8,10 s/search/replace/g</code><br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>:8,10 s/search/replace/g</code><br/>
+                                    </div>
                                     Add spaces at the begins of lines<br/>
                                     1.Ctr+V in to visual block then<br/>
-                                    <code>:'<,'>s/^/      /</code><br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>:'<,'>s/^/      /</code><br/>
+                                    </div>
                                     or<br/>
                                     2.Ctr+V then shift+i then add the things you want<br/>
-                                    
                                 </p>
-                            </div>
-                        <h6 class="text-left">Restic</h6>
-                            <div class="alert alert-info" role="alert">
-                                <p align="justify">
-                                    unblock restic<br/>
+                        <h5 class="text-left">Restic</h5>
+                            <p align="justify">
+                                unblock restic<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>sudo restic unlock -r /where/the/repo -v</code><br/>
-                                </p>
-                            </div>
-                        <h6 class="text-left">Ansible</h6>
-                            <div class="alert alert-info" role="alert">
-                                <p align="justify">
-                                    play the book<br/>
+                                </div>
+                            </p>
+                        <h5 class="text-left">Ansible</h5>
+                            <p align="justify">
+                                play the book<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>ansible-playbook the_file.yml</code><br/>
-                                </p>
-                            </div>
-                        <h6 class="text-left">Virsh</h6>
-                            <div class="alert alert-info" role="alert">
-                                <p align="justify">
-                                    Destroy the LVM<br/>
+                                </div>
+                            </p>
+                        <h5 class="text-left">Virsh</h5>
+                            <p align="justify">
+                                Destroy the LVM<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>virsh destroy</code><br/>
                                     <code>virsh list</code><br/>
                                     <code>virsh undefine</code><br/>
-                                </p>
-                            </div>
-                        <h6 class="text-left">Postfix/Mailing</h6>
-                            <div class="alert alert-info" role="alert">
-                                <p align="justify">
-                                    Bounce the mailx<br/>
+                                </div>
+                            </p>
+                        <h5 class="text-left">Postfix/Mailing</h5>
+                            <p align="justify">
+                                Bounce the mailx<br/>
+                                <div class="alert alert-info" role="alert">
                                     <code>mailq | grep mailx | awk '{print $1}' | while read i; do postsuper -d $i;done</code><br/>
-                                </p>
-                            </div>
-                        <h6 class="text-left">Misc.</h6>
+                                </div>
+                            </p>
+                        <h5 class="text-left">Misc.</h5>
                             <p align="justify">
                                 Right click paste in vim<br/>
                                 <div class="alert alert-info" role="alert">
