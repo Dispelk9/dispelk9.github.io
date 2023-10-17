@@ -57,49 +57,65 @@
             <div class="row justify-content-center">
                 <div class="col-lg mx-2 align-self-center">
                     <div class="my-3">
-                        <h1 class="text-center">Git</h1>
+                        <h6 class="text-left">Git</h6>
                             <div class="alert alert-info" role="alert">
                                 <p align="justify">
                                     change editor of git to vim<br/>
                                     <code>git config --global core.editor "vim"</code><br/>
                                 </p>
                             </div>
-                        <h1 class="text-center">Vi</h1>
+                        <h6 class="text-left">Vi</h6>
                             <div class="alert alert-info" role="alert">
                                 <p align="justify">
                                     remove empty lines<br/>
-                                    <code>g/^$/d</code><br/>
+                                    <code>:g/^$/d</code><br/>
                                     remove line with "text"<br/>
-                                    <code>g/text/d</code><br/>
+                                    <code>:g/text/d</code><br/>
                                     remove line with ./<br/>
-                                    <code>g/\.\//d</code><br/>
-                                    <code></code>
-                                    <code></code>
-                                    <code></code>
-                                    <code></code>
-                                
+                                    <code>:g/\.\//d</code><br/>
+                                    <code></code><br/>
+                                    <code></code><br/>
+                                    <code></code><br/>
+                                    <code></code><br/>
                                 </p>
                             </div>
-                        <h1 class="text-center">Restic</h1>
-                        <p align="justify">
-                            command block for Restic
-                        </p>
-                        <h1 class="text-center">Ansible</h1>
-                        <p align="justify">
-                            command block for Ansible
-                        </p>
-                        <h1 class="text-center">Virsh</h1>
-                        <p align="justify">
-                            command block for Virsh
-                        </p>
-                        <h1 class="text-center">Postfix/Mailing</h1>
-                        <p align="justify">
-                            command block for Postfix
-                        </p>
-                        <h1 class="text-center">Misc.</h1>
-                        <p align="justify">
-                            helpful command
-                        </p>
+                        <h6 class="text-left">Restic</h6>
+                            <div class="alert alert-info" role="alert">
+                                <p align="justify">
+                                    unblock restic<br/>
+                                    <code>sudo restic unlock -r /where/the/repo -v</code><br/>
+                                </p>
+                            </div>
+                        <h6 class="text-left">Ansible</h6>
+                            <div class="alert alert-info" role="alert">
+                                <p align="justify">
+                                    play the book<br/>
+                                    <code>ansible-playbook the_file.yml</code><br/>
+                                </p>
+                            </div>
+                        <h6 class="text-left">Virsh</h6>
+                            <div class="alert alert-info" role="alert">
+                                <p align="justify">
+                                    Destroy the LVM<br/>
+                                    <code>virsh destroy</code><br/>
+                                    <code>virsh list</code><br/>
+                                    <code>virsh undefine</code><br/>
+                                </p>
+                            </div>
+                        <h6 class="text-left">Postfix/Mailing</h6>
+                            <div class="alert alert-info" role="alert">
+                                <p align="justify">
+                                    Bounce the mailx<br/>
+                                    <code>mailq | grep mailx | awk '{print $1}' | while read i; do postsuper -d $i;done</code><br/>
+                                </p>
+                            </div>
+                        <h6 class="text-left">Misc.</h6>
+                        <div class="alert alert-info" role="alert">
+                            <p align="justify">
+                                Right click paste in vim<br/>
+                                <code>:set mouse=</code><br/>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
