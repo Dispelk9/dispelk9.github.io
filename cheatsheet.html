@@ -57,7 +57,10 @@
                 <div class="col-lg mx-2 align-self-center">
                     <div class="my-3">
                         <div class="text-center">
-                            <img src="cheatsheet1.jpg" class="img-fluid" alt="" srcset="">
+                            <figure class="figure">
+                                <img src="cheatsheet1.jpg" class="img-fluid" alt="" srcset="">
+                                <figcaption class="figure-caption">Do you get it? Source:Geek and Poke</figcaption>
+                            </figure>
                         </div>
                         <h1 class="text-center">Documentation</h1>
                         <p align="justify">
@@ -66,7 +69,7 @@
                             does not only make everything organized - it directly affects productivity 
                             and efficiency, keeps a track of progress, identifies areas of risk, 
                             and overall ensures that everyone is on the same page.<br/>
-                            So I should make one myself haha.<br/>
+                            So I should make one myself, my ultimate cheatsheet.<br/>
                         </p>
                     </div>
                 </div>
@@ -79,8 +82,47 @@
                         <h6 class="text-left">Git</h6>
                             <div class="alert alert-info" role="alert">
                                 <p align="justify">
+                                    see local branches<br/>
+                                    <code>git branch</code><br/>
+                                    see remote branches<br/>
+                                    <code>git branch -r</code><br/>
+                                    delete a remote branch
+                                    <code>git push origin --delete my-branch-name</code><br/>
+                                    delete a local branch<br/>
+                                    note: The -d option only deletes the branch if it has already been merged.<br/>
+                                    The -D option is a shortcut for --delete --force, which deletes the branch irrespective of its merged status.<br/>
+                                    <code>
+                                    git branch -d my-branch-name<br/>
+                                    git branch -D my-branch-name<br/>
+                                    </code>
                                     change editor of git to vim<br/>
                                     <code>git config --global core.editor "vim"</code><br/>
+                                    check timestamp<br/>
+                                    <code>git blame</code><br/>
+                                    amend specific commit<br/>
+                                    <code>
+                                        git rebase -i HEAD~3 for 3 latest commit<br/>
+                                        change to e(edit)<br/>
+                                        git commit --amend<br/>
+                                        git rebase --continue<br/>  
+                                    </code>
+                                    undo the merge<br/>
+                                    <code>
+                                        git merge --abort
+                                        git reset --merge
+                                    </code>
+                                    reset changes<br/>  
+                                    <code>
+                                        git reset .
+                                        git restore .
+                                    </code>
+                                    cherry pick the commits<br/>
+                                    <code>
+                                        go to production -> active branch<br/>
+                                        git cherry pick commit<br/>
+                                        commit from branch test<br/>
+                                        git push to create merge request<br/>
+                                    </code>
                                 </p>
                             </div>
                         <h6 class="text-left">Vi/Vim (incase you aren't nanoboy)</h6>
@@ -141,6 +183,27 @@
                             <p align="justify">
                                 Right click paste in vim<br/>
                                 <code>:set mouse=</code><br/>
+                                find diff two files and grep the difference<br/>
+                                <code>diff -c file1 file2| grep -E '^\+ ' >> file_diff</code><br/>
+                                find size all file in a folder<br/>
+                                <code>du -sh *</code><br/>
+                                check diskspace<br/>
+                                <code>df -h</code>
+                                gen key and put public key on Gitlab<br/>
+                                <code>
+                                    ssh-keygen<br/>
+                                    eval "$(ssh-agent -s)"<br/>
+                                    ssh-add private_key<br/>
+                                    add public_key on Gitlab<br/>
+                                    git clone remote_repo<br/>
+                                </code>
+                                Profiling to optimize app runtime<br/>
+                                <code>python -m cProfile pre-commit.py -s cummulative pre-commit.py</code><br/>
+                                Find files<br/>
+                                note: add -delete to delete the found files
+                                <code>find . -name "*.bak" -type f</code>
+                                Zip files then delete<br/>
+                                <code>find . -mtime +67 -type f | grep name_file | xargs tar -czvf zipped_file.tar --remove-files</code><br/>
                             </p>
                         </div>
                     </div>
