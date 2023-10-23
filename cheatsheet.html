@@ -182,6 +182,21 @@
                                 unblock restic<br/>
                                 <div class="alert alert-info" role="alert">
                                     <code>sudo restic unlock -r /where/the/repo -v</code><br/>
+                                    if it still lock: rm all in /srv/restic/repo/lock<br/>
+                                </div>
+                                fatal error: out of memory/does not have copy function<br/>
+                                <div class="alert alert-info" role="alert">
+                                    check-restic version<br/>
+                                    if 0.9.4 then it should be update with self-update<br/>
+                                    <code>restic self-update</code><br/>
+                                </div>
+                                pack abc: does not exist<br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>restic -r /srv/restic/repo/ rebuild-index</code><br/>
+                                </div>
+                                <br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code></code><br/>
                                 </div>
                             </p>
                         <h5 class="text-left">Ansible</h5>
@@ -198,6 +213,20 @@
                                     <code>virsh destroy</code><br/>
                                     <code>virsh list</code><br/>
                                     <code>virsh undefine</code><br/>
+                                    <code>virsh start</code><br/>
+                                </div>
+                                Get net-list<br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>virsh net-list</code><br/>
+                                    Show:<br/>
+                                    Name      State    Autostart   Persistent<br/>
+                                    --------------------------------------------<br/>
+                                     default   active   yes         yes<br/>
+                                     subnet    active   yes         yes<br/>
+                                </div>
+                                get IPs list<br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>virsh net-dhcp-leases (default or subnet)</code><br/>
                                 </div>
                             </p>
                         <h5 class="text-left">Postfix/Mailing</h5>
@@ -205,6 +234,25 @@
                                 Bounce the mailx<br/>
                                 <div class="alert alert-info" role="alert">
                                     <code>mailq | grep mailx | awk '{print $1}' | while read i; do postsuper -d $i;done</code><br/>
+                                </div>
+                            </p>
+                        <h5 class="text-left">Openssl</h5>
+                            <p align="justify">
+                                PWS p7b to crt<br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>openssl.exe pkcs7 -print_certs -in abc.p7b -out abc.crt</code><br/>
+                                </div>
+                                PWS p7b to pem<br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>openssl.exe pkcs7 -print_certs -in abc.p7b -out abc.pem</code><br/>
+                                </div>
+                                Git bash openssl with req.conf<br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>openssl req -out abc.csr -new -newkey rsa:4096 -sha256 -nodes -keyout abc.key -config req.conf</code><br/>
+                                </div>
+                                PWS with key using pin<br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>openssl.exe pkcs12 -clcerts -nodes -in abc.p12 -out abc.pem -password pass:'your_pin' -passin pass:'your_pin'</code><br/>
                                 </div>
                             </p>
                         <h5 class="text-left">Misc.</h5>
@@ -247,6 +295,18 @@
                                 Zip files then delete<br/>
                                 <div class="alert alert-info" role="alert">
                                     <code>find . -mtime +67 -type f | grep name_file | xargs tar -czvf zipped_file.tar --remove-files</code><br/>
+                                </div>
+                                <br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code></code><br/>
+                                </div>
+                                Update APT<br/>
+                                <div class="alert alert-info" role="alert">
+                                    <code>
+                                        sudo apt update><br/>
+                                        sudo apt list --upgradable><br/>
+                                        sudo apt upgrade -y><br/>
+                                    </code><br/>
                                 </div>
                             </p>
                     </div>
