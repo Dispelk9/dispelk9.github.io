@@ -195,6 +195,27 @@
                                     <code>restic -r /srv/restic/repo/ rebuild-index</code><br/>
                                 </div>
                                 <br/>
+                                restic backup<br/>
+                                <div class="alert alert-info" role="alert">
+                                    access remote storage with sftp<br/>
+                                    <code>sftp -P 22 account@storage_domain</code><br/>
+                                    see file on sftp<br/>
+                                    <code>
+                                        get file<br/>
+                                        !cat file<br/>
+                                    </code><br/>
+                                    copy the files from remote to local<br/>
+                                    <code>scp -r account@storage_domain:/where/your/repo /target/repo/</code><br/>
+                                    get the snapshot IPs<br/>
+                                    <code>restic -r /target/repo/ snapshots</code>
+                                    E.g: testing restore 1512amer locally<br/>
+                                    <code>restic -r /target/repo/ restore 1512amer --target /target_restore/folder</code><br/>
+                                    Restore remote server/VM<br/>
+                                    <code>
+                                        ssh remote_VM<br/>
+                                        restic -r sftp:root@mainserver:/target/repo --password-file /folder/restic/password restore 1512amer --target /target_restore/folder<br/>
+                                    </code>
+                                </div>
                             </p>
                         <h5 class="text-left">Ansible</h5>
                             <p align="justify">
