@@ -75,258 +75,260 @@
                 </div>
             </div>
         </div>
-        <div class="container my-4 ">
-            <div class="row justify-content-center">
-                <div class="col-lg mx-2 align-self-center">
-                    <div class="my-3">
-                        <h5 class="text-left">Git</h5>
-                            <p align="justify">
-                                see local branches<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>git branch</code><br/>
-                                </div>
-                                see remote branches<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>git branch -r</code><br/>
-                                </div>
-                                delete a remote branch<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>git push origin --delete my-branch-name</code><br/>
-                                </div>   
-                                delete a local branch<br/>
-                                <div class="alert alert-info" role="alert">
-                                    note: The -d option only deletes the branch if it has already been merged.<br/>
-                                    The -D option is a shortcut for --delete --force, which deletes the branch irrespective of its merged status.<br/>
-                                    <code>
-                                        git branch -d my-branch-name<br/>
-                                        git branch -D my-branch-name<br/>
-                                    </code>
-                                </div>
-                                change editor of git to vim<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>git config --global core.editor "vim"</code><br/>
-                                </div>
-                                check timestamp<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>git blame</code><br/>
-                                </div>
-                                amend specific commit<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>
-                                        git rebase -i HEAD~3 for 3 latest commit<br/>
-                                        change to e(edit)<br/>
-                                        git commit --amend<br/>
-                                        git rebase --continue<br/>  
-                                    </code>
-                                </div>
-                                undo the merge<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>
-                                        git merge --abort<br/>
-                                        git reset --merge<br/>
-                                    </code>
-                                </div>
-                                reset changes<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>
-                                        git reset .<br/>
-                                        git restore .<br/>
-                                    </code>
-                                </div>
-                                cherry pick the commits<br/>
-                                <div class="alert alert-info" role="alert">
-                                    go to production -> active branch<br/>
-                                    <code>
-                                        git cherry pick commit<br/>
-                                    </code>
-                                    commit from branch test<br/>
-                                    git push to create merge request<br/>
-                                </div>
-                            </p>
-                        <h5 class="text-left">Vi/Vim (incase you aren't nanoboy)</h5>
+        <div class="p-3 mb-2 bg-dark text-white">
+            <div class="container my-4 ">
+                <div class="row justify-content-center">
+                    <div class="col-lg mx-2 align-self-center">
+                        <div class="my-3">
+                            <h5 class="text-left">Git</h5>
                                 <p align="justify">
-                                    remove empty lines<br/>
+                                    see local branches<br/>
                                     <div class="alert alert-info" role="alert">
-                                        <code>:g/^$/d</code><br/>
+                                        <code>git branch</code><br/>
                                     </div>
-                                    remove line with "text"<br/>
+                                    see remote branches<br/>
                                     <div class="alert alert-info" role="alert">
-                                        <code>:g/text/d</code><br/>
+                                        <code>git branch -r</code><br/>
                                     </div>
-                                    remove line with ./<br/>
+                                    delete a remote branch<br/>
                                     <div class="alert alert-info" role="alert">
-                                        <code>:g/\.\//d</code><br/>
+                                        <code>git push origin --delete my-branch-name</code><br/>
+                                    </div>   
+                                    delete a local branch<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        note: The -d option only deletes the branch if it has already been merged.<br/>
+                                        The -D option is a shortcut for --delete --force, which deletes the branch irrespective of its merged status.<br/>
+                                        <code>
+                                            git branch -d my-branch-name<br/>
+                                            git branch -D my-branch-name<br/>
+                                        </code>
                                     </div>
-                                    remove all lines not contain foo<br/>
+                                    change editor of git to vim<br/>
                                     <div class="alert alert-info" role="alert">
-                                        <code>:g!/foo/d</code><br/>
+                                        <code>git config --global core.editor "vim"</code><br/>
                                     </div>
-                                    remove unwanted space in vim<br/>
+                                    check timestamp<br/>
                                     <div class="alert alert-info" role="alert">
-                                        <code>:%s/\s\+$//e</code><br/>
+                                        <code>git blame</code><br/>
                                     </div>
-                                    search and replace with range from line 8 to 10(Note: ^I = Tab)<br/>
+                                    amend specific commit<br/>
                                     <div class="alert alert-info" role="alert">
-                                        <code>:8,10 s/search/replace/g</code><br/>
+                                        <code>
+                                            git rebase -i HEAD~3 for 3 latest commit<br/>
+                                            change to e(edit)<br/>
+                                            git commit --amend<br/>
+                                            git rebase --continue<br/>  
+                                        </code>
                                     </div>
-                                    Add spaces at the begins of lines<br/>
+                                    undo the merge<br/>
                                     <div class="alert alert-info" role="alert">
-                                        1.Ctr+V in to visual block then<br/>
-                                        <code>:'<,'>s/^/      /</code><br/>
-                                        or<br/>
-                                        2.Ctr+V then shift+i then add the things you want<br/>
+                                        <code>
+                                            git merge --abort<br/>
+                                            git reset --merge<br/>
+                                        </code>
+                                    </div>
+                                    reset changes<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>
+                                            git reset .<br/>
+                                            git restore .<br/>
+                                        </code>
+                                    </div>
+                                    cherry pick the commits<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        go to production -> active branch<br/>
+                                        <code>
+                                            git cherry pick commit<br/>
+                                        </code>
+                                        commit from branch test<br/>
+                                        git push to create merge request<br/>
                                     </div>
                                 </p>
-                        <h5 class="text-left">Restic</h5>
-                            <p align="justify">
-                                unblock restic<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>sudo restic unlock -r /where/the/repo -v</code><br/>
-                                    if it still lock: rm all in /srv/restic/repo/lock<br/>
-                                </div>
-                                fatal error: out of memory/does not have copy function<br/>
-                                <div class="alert alert-info" role="alert">
-                                    check-restic version<br/>
-                                    if 0.9.4 then it should be update with self-update<br/>
-                                    <code>restic self-update</code><br/>
-                                </div>
-                                pack abc: does not exist<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>restic -r /srv/restic/repo/ rebuild-index</code><br/>
-                                </div>
-                                <br/>
-                                restic backup<br/>
-                                <div class="alert alert-info" role="alert">
-                                    access remote storage with sftp<br/>
-                                    <code>sftp -P 22 account@storage_domain</code><br/>
-                                    see file on sftp<br/>
-                                    <code>
-                                        get file<br/>
-                                        !cat file<br/>
-                                    </code><br/>
-                                    copy the files from remote to local<br/>
-                                    <code>scp -r account@storage_domain:/where/your/repo /target/repo/</code><br/>
-                                    get the snapshot IPs<br/>
-                                    <code>restic -r /target/repo/ snapshots</code>
-                                    E.g: testing restore 1512amer locally<br/>
-                                    <code>restic -r /target/repo/ restore 1512amer --target /target_restore/folder</code><br/>
-                                    Restore remote server/VM<br/>
-                                    <code>
-                                        ssh remote_VM<br/>
-                                        restic -r sftp:root@mainserver:/target/repo --password-file /folder/restic/password restore 1512amer --target /target_restore/folder<br/>
-                                    </code>
-                                </div>
-                            </p>
-                        <h5 class="text-left">Ansible</h5>
-                            <p align="justify">
-                                play the book<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>ansible-playbook the_file.yml</code><br/>
-                                </div>
-                            </p>
-                        <h5 class="text-left">Virsh</h5>
-                            <p align="justify">
-                                Destroy the LVM<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>virsh destroy</code><br/>
-                                    <code>virsh list</code><br/>
-                                    <code>virsh undefine</code><br/>
-                                    <code>virsh start</code><br/>
-                                </div>
-                                Get net-list<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>virsh net-list</code><br/>
-                                    Show:<br/>
-                                    Name<span class="tab"></span>State<span class="tab"></span>Autostart<span class="tab"></span>Persistent<br/>
-                                    --------------------------------------------<br/>
-                                     default<span class="tab"></span>active<span class="tab"></span>yes<span class="tab"></span>yes<br/>
-                                     subnet<span class="tab"></span>active<span class="tab"></span>yes<span class="tab"></span>yes<br/>
-                                </div>
-                                get IPs list<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>virsh net-dhcp-leases (default or subnet)</code><br/>
-                                </div>
-                            </p>
-                        <h5 class="text-left">Postfix/Mailing</h5>
-                            <p align="justify">
-                                Bounce the mailx<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>mailq | grep mailx | awk '{print $1}' | while read i; do postsuper -d $i;done</code><br/>
-                                </div>
-                            </p>
-                        <h5 class="text-left">Openssl</h5>
-                            <p align="justify">
-                                PWS p7b to crt<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>openssl.exe pkcs7 -print_certs -in abc.p7b -out abc.crt</code><br/>
-                                </div>
-                                PWS p7b to pem<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>openssl.exe pkcs7 -print_certs -in abc.p7b -out abc.pem</code><br/>
-                                </div>
-                                Git bash openssl with req.conf<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>openssl req -out abc.csr -new -newkey rsa:4096 -sha256 -nodes -keyout abc.key -config req.conf</code><br/>
-                                </div>
-                                PWS with key using pin<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>openssl.exe pkcs12 -clcerts -nodes -in abc.p12 -out abc.pem -password pass:'your_pin' -passin pass:'your_pin'</code><br/>
-                                </div>
-                            </p>
-                        <h5 class="text-left">Misc.</h5>
-                            <p align="justify">
-                                Right click paste in vim<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>:set mouse=</code><br/>
-                                </div>
-                                find diff two files and grep the difference<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>diff -c file1 file2| grep -E '^\+ ' >> file_diff</code><br/>
-                                </div>
-                                find size all file in a folder<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>du -sh *</code><br/>
-                                </div>
-                                check diskspace<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>df -h</code><br/>
-                                </div>
-                                gen key and put public key on Gitlab<br/>
-                                note: add public_key on Gitlab<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>
-                                        ssh-keygen<br/>
-                                        eval "$(ssh-agent -s)"<br/>
-                                        ssh-add private_key<br/>
-                                        git clone remote_repo<br/>
-                                    </code>
-                                </div>
-                                Profiling to optimize app runtime<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>python -m cProfile pre-commit.py -s cummulative pre-commit.py</code><br/>
-                                </div>
-                                Find files<br/>
-                                <div class="alert alert-info" role="alert">
-                                    note: add -delete to delete the found files<br/>
-                                    <code>find . -name "*.bak" -type f</code>
-                                </div>
-                                Zip files then delete<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>find . -mtime +67 -type f | grep name_file | xargs tar -czvf zipped_file.tar --remove-files</code><br/>
-                                </div>
-                                Update APT<br/>
-                                <div class="alert alert-info" role="alert">
-                                    <code>
-                                        sudo apt update><br/>
-                                        sudo apt list --upgradable><br/>
-                                        sudo apt upgrade -y><br/>
-                                    </code><br/>
-                                </div>
-                            </p>
+                            <h5 class="text-left">Vi/Vim (incase you aren't nanoboy)</h5>
+                                    <p align="justify">
+                                        remove empty lines<br/>
+                                        <div class="alert alert-info" role="alert">
+                                            <code>:g/^$/d</code><br/>
+                                        </div>
+                                        remove line with "text"<br/>
+                                        <div class="alert alert-info" role="alert">
+                                            <code>:g/text/d</code><br/>
+                                        </div>
+                                        remove line with ./<br/>
+                                        <div class="alert alert-info" role="alert">
+                                            <code>:g/\.\//d</code><br/>
+                                        </div>
+                                        remove all lines not contain foo<br/>
+                                        <div class="alert alert-info" role="alert">
+                                            <code>:g!/foo/d</code><br/>
+                                        </div>
+                                        remove unwanted space in vim<br/>
+                                        <div class="alert alert-info" role="alert">
+                                            <code>:%s/\s\+$//e</code><br/>
+                                        </div>
+                                        search and replace with range from line 8 to 10(Note: ^I = Tab)<br/>
+                                        <div class="alert alert-info" role="alert">
+                                            <code>:8,10 s/search/replace/g</code><br/>
+                                        </div>
+                                        Add spaces at the begins of lines<br/>
+                                        <div class="alert alert-info" role="alert">
+                                            1.Ctr+V in to visual block then<br/>
+                                            <code>:'<,'>s/^/      /</code><br/>
+                                            or<br/>
+                                            2.Ctr+V then shift+i then add the things you want<br/>
+                                        </div>
+                                    </p>
+                            <h5 class="text-left">Restic</h5>
+                                <p align="justify">
+                                    unblock restic<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>sudo restic unlock -r /where/the/repo -v</code><br/>
+                                        if it still lock: rm all in /srv/restic/repo/lock<br/>
+                                    </div>
+                                    fatal error: out of memory/does not have copy function<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        check-restic version<br/>
+                                        if 0.9.4 then it should be update with self-update<br/>
+                                        <code>restic self-update</code><br/>
+                                    </div>
+                                    pack abc: does not exist<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>restic -r /srv/restic/repo/ rebuild-index</code><br/>
+                                    </div>
+                                    <br/>
+                                    restic backup<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        access remote storage with sftp<br/>
+                                        <code>sftp -P 22 account@storage_domain</code><br/>
+                                        see file on sftp<br/>
+                                        <code>
+                                            get file<br/>
+                                            !cat file<br/>
+                                        </code><br/>
+                                        copy the files from remote to local<br/>
+                                        <code>scp -r account@storage_domain:/where/your/repo /target/repo/</code><br/>
+                                        get the snapshot IPs<br/>
+                                        <code>restic -r /target/repo/ snapshots</code>
+                                        E.g: testing restore 1512amer locally<br/>
+                                        <code>restic -r /target/repo/ restore 1512amer --target /target_restore/folder</code><br/>
+                                        Restore remote server/VM<br/>
+                                        <code>
+                                            ssh remote_VM<br/>
+                                            restic -r sftp:root@mainserver:/target/repo --password-file /folder/restic/password restore 1512amer --target /target_restore/folder<br/>
+                                        </code>
+                                    </div>
+                                </p>
+                            <h5 class="text-left">Ansible</h5>
+                                <p align="justify">
+                                    play the book<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>ansible-playbook the_file.yml</code><br/>
+                                    </div>
+                                </p>
+                            <h5 class="text-left">Virsh</h5>
+                                <p align="justify">
+                                    Destroy the LVM<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>virsh destroy</code><br/>
+                                        <code>virsh list</code><br/>
+                                        <code>virsh undefine</code><br/>
+                                        <code>virsh start</code><br/>
+                                    </div>
+                                    Get net-list<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>virsh net-list</code><br/>
+                                        Show:<br/>
+                                        Name<span class="tab"></span>State<span class="tab"></span>Autostart<span class="tab"></span>Persistent<br/>
+                                        --------------------------------------------<br/>
+                                        default<span class="tab"></span>active<span class="tab"></span>yes<span class="tab"></span>yes<br/>
+                                        subnet<span class="tab"></span>active<span class="tab"></span>yes<span class="tab"></span>yes<br/>
+                                    </div>
+                                    get IPs list<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>virsh net-dhcp-leases (default or subnet)</code><br/>
+                                    </div>
+                                </p>
+                            <h5 class="text-left">Postfix/Mailing</h5>
+                                <p align="justify">
+                                    Bounce the mailx<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>mailq | grep mailx | awk '{print $1}' | while read i; do postsuper -d $i;done</code><br/>
+                                    </div>
+                                </p>
+                            <h5 class="text-left">Openssl</h5>
+                                <p align="justify">
+                                    PWS p7b to crt<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>openssl.exe pkcs7 -print_certs -in abc.p7b -out abc.crt</code><br/>
+                                    </div>
+                                    PWS p7b to pem<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>openssl.exe pkcs7 -print_certs -in abc.p7b -out abc.pem</code><br/>
+                                    </div>
+                                    Git bash openssl with req.conf<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>openssl req -out abc.csr -new -newkey rsa:4096 -sha256 -nodes -keyout abc.key -config req.conf</code><br/>
+                                    </div>
+                                    PWS with key using pin<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>openssl.exe pkcs12 -clcerts -nodes -in abc.p12 -out abc.pem -password pass:'your_pin' -passin pass:'your_pin'</code><br/>
+                                    </div>
+                                </p>
+                            <h5 class="text-left">Misc.</h5>
+                                <p align="justify">
+                                    Right click paste in vim<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>:set mouse=</code><br/>
+                                    </div>
+                                    find diff two files and grep the difference<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>diff -c file1 file2| grep -E '^\+ ' >> file_diff</code><br/>
+                                    </div>
+                                    find size all file in a folder<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>du -sh *</code><br/>
+                                    </div>
+                                    check diskspace<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>df -h</code><br/>
+                                    </div>
+                                    gen key and put public key on Gitlab<br/>
+                                    note: add public_key on Gitlab<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>
+                                            ssh-keygen<br/>
+                                            eval "$(ssh-agent -s)"<br/>
+                                            ssh-add private_key<br/>
+                                            git clone remote_repo<br/>
+                                        </code>
+                                    </div>
+                                    Profiling to optimize app runtime<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>python -m cProfile pre-commit.py -s cummulative pre-commit.py</code><br/>
+                                    </div>
+                                    Find files<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        note: add -delete to delete the found files<br/>
+                                        <code>find . -name "*.bak" -type f</code>
+                                    </div>
+                                    Zip files then delete<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>find . -mtime +67 -type f | grep name_file | xargs tar -czvf zipped_file.tar --remove-files</code><br/>
+                                    </div>
+                                    Update APT<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>
+                                            sudo apt update><br/>
+                                            sudo apt list --upgradable><br/>
+                                            sudo apt upgrade -y><br/>
+                                        </code><br/>
+                                    </div>
+                                </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        
+        </div>
         <!-- JavaScript: Above <body>  -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
