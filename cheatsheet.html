@@ -81,96 +81,84 @@
             </div>
         </div>
         <div class="p-3 mb-2 bg-dark text-white">
-            <div data-bs-spy="scroll" data-bs-target="#ToC" data-bs-offset="0" tabindex="0">
-                <h4 id="Git">Git</h4>
-                <p>...</p>
-                <h5 id="item-1-1">Item 1-1</h5>
-                <p>...</p>
-                <h5 id="item-1-2">Item 1-2</h5>
-                <p>...</p>
-                <h4 id="item-2">Item 2</h4>
-                <p>...</p>
-                <h4 id="item-3">Item 3</h4>
-                <p>...</p>
-                <h5 id="item-3-1">Item 3-1</h5>
-                <p>...</p>
-                <h5 id="item-3-2">Item 3-2</h5>
-                <p>...</p>
-            </div>
-            <div class="container my-4 ">
-                <nav id="ToC">
-                <a class="ToC" href="#">Table of Contents</a>
+            <nav id="navbar-toc" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+                <a class="navbar-toc" href="#">Table of Contents</a>
+                <nav class="nav nav-pills flex-column">
+                  <a class="nav-link" href="#Git">Git</a>
+                  <a class="nav-link" href="#Restic">Restic</a>
+                  <a class="nav-link" href="#Vi">Vi/Vim</a>
+                </nav>
+              </nav>
+              
+            <div class="container my-4 " data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
                 <div class="row justify-content-center">
                     <div class="col-lg mx-2 align-self-center">
                         <div class="my-3">
-                            <nav id="ToC">
-                                <a class="Git" href="#Git">Git</a>
-                                <h5 class="text-left">Git</h5>
-                                    <p align="justify">
-                                        see local branches<br/>
-                                        <div class="alert alert-info" role="alert">
-                                            <code>git branch</code><br/>
-                                        </div>
-                                        see remote branches<br/>
-                                        <div class="alert alert-info" role="alert">
-                                            <code>git branch -r</code><br/>
-                                        </div>
-                                        delete a remote branch<br/>
-                                        <div class="alert alert-info" role="alert">
-                                            <code>git push origin --delete my-branch-name</code><br/>
-                                        </div>   
-                                        delete a local branch<br/>
-                                        <div class="alert alert-info" role="alert">
-                                            note: The -d option only deletes the branch if it has already been merged.<br/>
-                                            The -D option is a shortcut for --delete --force, which deletes the branch irrespective of its merged status.<br/>
-                                            <code>
-                                                git branch -d my-branch-name<br/>
-                                                git branch -D my-branch-name<br/>
-                                            </code>
-                                        </div>
-                                        change editor of git to vim<br/>
-                                        <div class="alert alert-info" role="alert">
-                                            <code>git config --global core.editor "vim"</code><br/>
-                                        </div>
-                                        check timestamp<br/>
-                                        <div class="alert alert-info" role="alert">
-                                            <code>git blame</code><br/>
-                                        </div>
-                                        amend specific commit<br/>
-                                        <div class="alert alert-info" role="alert">
-                                            <code>
-                                                git rebase -i HEAD~3 for 3 latest commit<br/>
-                                                change to e(edit)<br/>
-                                                git commit --amend<br/>
-                                                git rebase --continue<br/>  
-                                            </code>
-                                        </div>
-                                        undo the merge<br/>
-                                        <div class="alert alert-info" role="alert">
-                                            <code>
-                                                git merge --abort<br/>
-                                                git reset --merge<br/>
-                                            </code>
-                                        </div>
-                                        reset changes<br/>
-                                        <div class="alert alert-info" role="alert">
-                                            <code>
-                                                git reset .<br/>
-                                                git restore .<br/>
-                                            </code>
-                                        </div>
-                                        cherry pick the commits<br/>
-                                        <div class="alert alert-info" role="alert">
-                                            go to production -> active branch<br/>
-                                            <code>
-                                                git cherry pick commit<br/>
-                                            </code>
-                                            commit from branch test<br/>
-                                            git push to create merge request<br/>
-                                        </div>
-                                    </p>
-                            </nav>
-                            <h5 class="text-left">Vi/Vim (incase you aren't nanoboy)</h5>
+                            <h5 class="text-left" id="Git">Git</h5>
+                                <p align="justify">
+                                    see local branches<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>git branch</code><br/>
+                                    </div>
+                                    see remote branches<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>git branch -r</code><br/>
+                                    </div>
+                                    delete a remote branch<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>git push origin --delete my-branch-name</code><br/>
+                                    </div>   
+                                    delete a local branch<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        note: The -d option only deletes the branch if it has already been merged.<br/>
+                                        The -D option is a shortcut for --delete --force, which deletes the branch irrespective of its merged status.<br/>
+                                        <code>
+                                            git branch -d my-branch-name<br/>
+                                            git branch -D my-branch-name<br/>
+                                        </code>
+                                    </div>
+                                    change editor of git to vim<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>git config --global core.editor "vim"</code><br/>
+                                    </div>
+                                    check timestamp<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>git blame</code><br/>
+                                    </div>
+                                    amend specific commit<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>
+                                            git rebase -i HEAD~3 for 3 latest commit<br/>
+                                            change to e(edit)<br/>
+                                            git commit --amend<br/>
+                                            git rebase --continue<br/>  
+                                        </code>
+                                    </div>
+                                    undo the merge<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>
+                                            git merge --abort<br/>
+                                            git reset --merge<br/>
+                                        </code>
+                                    </div>
+                                    reset changes<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <code>
+                                            git reset .<br/>
+                                            git restore .<br/>
+                                        </code>
+                                    </div>
+                                    cherry pick the commits<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        go to production -> active branch<br/>
+                                        <code>
+                                            git cherry pick commit<br/>
+                                        </code>
+                                        commit from branch test<br/>
+                                        git push to create merge request<br/>
+                                    </div>
+                                </p>
+                            <h5 class="text-left" id="Vi">Vi/Vim (incase you aren't nanoboy)</h5>
                                 <p align="justify">
                                     remove empty lines<br/>
                                     <div class="alert alert-info" role="alert">
@@ -204,7 +192,7 @@
                                         2.Ctr+V then shift+i then add the things you want<br/>
                                     </div>
                                 </p>
-                            <h5 class="text-left">Restic</h5>
+                            <h5 class="text-left" id="Restic">Restic</h5>
                                 <p align="justify">
                                     unblock restic<br/>
                                     <div class="alert alert-info" role="alert">
@@ -353,7 +341,6 @@
                         </div>
                     </div>
                 </div>
-                </nav>
             </div>
         </div>
         <!-- JavaScript: Above <body>  -->
