@@ -81,12 +81,17 @@
             </div>
         </div>
         <div class="p-3 mb-2 bg-dark text-white">
-            <nav id="navbar-toc" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
-                <a class="navbar-toc" href="#">Table of Contents</a>
+            <nav id="navbar-toc">
+                <a class="navbar-toc" href="/#">Table of Contents</a>
                 <nav class="nav nav-pills flex-column">
-                  <a class="nav-link" href="#Git">Git</a>
-                  <a class="nav-link" href="#Restic">Restic</a>
-                  <a class="nav-link" href="#Vi">Vi/Vim</a>
+                  <a class="nav-link" href="/#Git">Git</a>
+                  <a class="nav-link" href="/#Vi">Vi/Vim</a>
+                  <a class="nav-link" href="/#Restic">Restic</a>
+                  <a class="nav-link" href="/#Ansible">Ansible</a>
+                  <a class="nav-link" href="/#Virsh">Virsh</a>
+                  <a class="nav-link" href="/#Postfix/Mailing">Postfix/Mailing</a>
+                  <a class="nav-link" href="/#Openssl">Openssl</a>
+                  <a class="nav-link" href="/#Misc">Miscellaneous</a>
                 </nav>
               </nav>
               
@@ -232,7 +237,7 @@
                                         </code>
                                     </div>
                                 </p>
-                            <h5 class="text-left">Ansible</h5>
+                            <h5 class="text-left" id="Ansible">Ansible</h5>
                                 <p align="justify">
                                     play the book<br/>
                                     <div class="alert alert-info" role="alert">
@@ -262,14 +267,14 @@
                                         <code>virsh net-dhcp-leases (default or subnet)</code><br/>
                                     </div>
                                 </p>
-                            <h5 class="text-left">Postfix/Mailing</h5>
+                            <h5 class="text-left" id="Postfix/Mailing">Postfix/Mailing</h5>
                                 <p align="justify">
                                     Bounce the mailx<br/>
                                     <div class="alert alert-info" role="alert">
                                         <code>mailq | grep mailx | awk '{print $1}' | while read i; do postsuper -d $i;done</code><br/>
                                     </div>
                                 </p>
-                            <h5 class="text-left">Openssl</h5>
+                            <h5 class="text-left" id="Openssl">Openssl</h5>
                                 <p align="justify">
                                     PWS p7b to crt<br/>
                                     <div class="alert alert-info" role="alert">
@@ -288,7 +293,7 @@
                                         <code>openssl.exe pkcs12 -clcerts -nodes -in abc.p12 -out abc.pem -password pass:'your_pin' -passin pass:'your_pin'</code><br/>
                                     </div>
                                 </p>
-                            <h5 class="text-left">Misc.</h5>
+                            <h5 class="text-left" id="Misc">Misc.</h5>
                                 <p align="justify">
                                     Right click paste in vim<br/>
                                     <div class="alert alert-info" role="alert">
