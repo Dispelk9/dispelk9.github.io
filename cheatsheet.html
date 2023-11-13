@@ -4,6 +4,9 @@
     body{
         background-color: grey;
     }
+    nav[data-toggle="toc"] {
+        top: 42px;
+      }
 </style>
     <head>
         <meta charset="UTF-8">
@@ -79,11 +82,11 @@
         </div>
         <div class="p-3 mb-2 bg-dark text-white">
             <div class="container my-4 ">
-                <nav id="toc" data-toggle="toc">
                 <div class="row justify-content-center">
                     <div class="col-lg mx-2 align-self-center">
                         <div class="my-3">
-                            <h5 class="text-left">Git</h5>
+                            <nav id="toc" data-toggle="toc"></nav>
+                            <h5 class="text-left" data-toc-text="Git">Git</h5>
                                 <p align="justify">
                                     see local branches<br/>
                                     <div class="alert alert-info" role="alert">
@@ -330,7 +333,6 @@
                         </div>
                     </div>
                 </div>
-                </nav>
             </div>
         </div>
         <!-- JavaScript: Above <body>  -->
