@@ -85,6 +85,7 @@
                         <nav id="navbar-toc" class="navbar flex-column align-items-stretch p-3 sticky-top">
                             <a class="navbar-brand text-white">Table of Contents</a>
                             <nav class="nav nav-pills flex-column">
+                              <a class="navbar-brand text-white" href="#Virsh">Docker</a>
                               <a class="navbar-brand text-white" href="#Git">Git</a>
                               <a class="navbar-brand text-white" href="#Vi">Vi/Vim</a>
                               <a class="navbar-brand text-white" href="#Restic">Restic</a>
@@ -100,6 +101,45 @@
                         <div class="row justify-content-center">
                             <div class="col-lg mx-2 align-self-center">
                                 <div class="my-3">
+                                    <h5 class="text-left" id="Docker">Docker</h5>
+                                        <p align="justify">
+                                            build new images<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>docker build -t new_images .</code><br/>
+                                            </div>
+                                            show docker images<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>
+                                                    docker images<br/>
+                                                    docker image rm<br/>
+                                                </code>
+                                            </div>
+                                            show all container<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>docker ps -a</code><br/>
+                                            </div>   
+                                            remove all containers<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>
+                                                    docker rm $(docker ps -aq)<br/>
+                                                </code>
+                                            </div>
+                                            run existing container<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>
+                                                    docker start "container"<br/>
+                                                    docker attach "container"<br/>
+                                                </code>
+                                            </div>
+                                            run new container<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                vhodeb11:latest image<br/>
+                                                --rm to remove container after exit<br/>
+                                                <code>
+                                                    docker run --rm -h "deb11" -ti vhodeb11:latest /bin/bash<br/>
+                                                </code>
+                                            </div>
+                                        </p>
                                     <h5 class="text-left" id="Git">Git</h5>
                                         <p align="justify">
                                             see local branches<br/>
@@ -244,6 +284,10 @@
                                             <div class="alert alert-info" role="alert">
                                                 <code>ansible-playbook the_file.yml</code><br/>
                                             </div>
+                                            ansible-pull<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>ansible-pull -U "URL HTTPS on repo"</code><br/>
+                                            </div>
                                         </p>
                                     <h5 class="text-left" id="Virsh">Virsh</h5>
                                         <p align="justify">
@@ -266,6 +310,10 @@
                                             get IPs list<br/>
                                             <div class="alert alert-info" role="alert">
                                                 <code>virsh net-dhcp-leases (default or subnet)</code><br/>
+                                            </div>
+                                            See console on vm server<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>virsh start --console "name_server"</code><br/>
                                             </div>
                                         </p>
                                     <h5 class="text-left" id="Postfix/Mailing">Postfix/Mailing</h5>
@@ -338,9 +386,18 @@
                                             Update APT<br/>
                                             <div class="alert alert-info" role="alert">
                                                 <code>
-                                                    sudo apt update><br/>
-                                                    sudo apt list --upgradable><br/>
-                                                    sudo apt upgrade -y><br/>
+                                                    sudo apt update<br/>
+                                                    sudo apt list --upgradable<br/>
+                                                    sudo apt upgrade -y<br/>
+                                                </code><br/>
+                                            </div>
+                                            Add vho to sudo<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>
+                                                    sudo usermod -a -G sudo vho<br/>
+                                                    groups<br/>
+                                                    vi /etc/sudoers<br/>
+                                                    vho ALL=(ALL:ALL) ALL<br/>
                                                 </code><br/>
                                             </div>
                                         </p>
