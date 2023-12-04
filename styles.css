@@ -50,17 +50,17 @@ svg {
 }
 
 .text-copy:nth-child(1){
-	stroke: #4D163D;
+	stroke: #b9c8c3;
 	animation-delay: -1;
 }
 
 .text-copy:nth-child(2){
-	stroke: #840037;
+	stroke: #83c8dd;
 	animation-delay: -2s;
 }
 
 .text-copy:nth-child(3){
-	stroke: #BD0034;
+	stroke: #0fb5c1;
 	animation-delay: -3s;
 }
 
@@ -75,7 +75,7 @@ svg {
 }
 
 @keyframes stroke-offset{
-	100% {stroke-dashoffset: -35%;}
+	50% {stroke-dashoffset: -35%;}
 }
 
 /*====================================*/
