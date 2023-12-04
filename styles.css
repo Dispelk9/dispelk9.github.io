@@ -42,7 +42,7 @@ nav[data-toggle="toc"] {
     }
   }
 
-  p {
+  pl {
     animation-duration: 3s;
     animation-name: slidein;
   }
