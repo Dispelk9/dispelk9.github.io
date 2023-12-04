@@ -30,7 +30,7 @@ nav[data-toggle="toc"] {
     transition: opacity 0s 2.6s;
 }
 
-@keyframes slidein {
+/* @keyframes slidein {
     from {
       margin-left: 100%;
       width: 300%;
@@ -42,8 +42,8 @@ nav[data-toggle="toc"] {
     }
   }
 
-  pl {
+  p {
     animation-duration: 3s;
     animation-name: slidein;
-  }
+  } */
   
