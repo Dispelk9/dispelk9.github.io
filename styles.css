@@ -119,3 +119,11 @@ svg {
     height: 50vh;
     background-color: #000;
   }
+.home {
+    min-height: 100vh;
+    min-width: 100vw;
+    
+    position: absolute; 
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
