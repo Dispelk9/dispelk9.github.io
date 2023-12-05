@@ -220,13 +220,8 @@ svg {
     box-sizing: border-box;
   }
 
-h1 span {
-    font-size: 40px;
-    margin-left: 40px;
-  }
 
-
-h1 {
+.hx {
     color: #333;
     font-family: tahoma;
     font-size: 3rem;
@@ -237,7 +232,13 @@ h1 {
     overflow: hidden;
     position: relative;
     width: 550px;
-  }  
+}  
+
+.hx span {
+    font-size: 40px;
+    margin-left: 40px;
+  }
+
 .message {
     background-color: yellow;
     color: #333;
