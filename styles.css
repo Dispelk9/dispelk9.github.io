@@ -231,13 +231,8 @@ svg {
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-    width: 550px;
+    width: 700px;
 }  
-
-.hx span {
-    font-size: 40px;
-    margin-left: 40px;
-  }
 
 .message {
     background-color: yellow;
