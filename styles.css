@@ -214,12 +214,31 @@ svg {
 
 
 /*Sliding Text Animation Carousel*/
+
+
+* {
+    box-sizing: border-box;
+  }
+
 h1 span {
     font-size: 40px;
     margin-left: 40px;
   }
-  
-  .message {
+
+
+h1 {
+    color: #333;
+    font-family: tahoma;
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 550px;
+  }  
+.message {
     background-color: yellow;
     color: #333;
     display: block;
