@@ -87,10 +87,10 @@ svg {
    text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
+    #ffffff 0%,
+    #b0acb4 29%,
+    #595657 67%,
+    #0e0e0d 100%
   );
   background-size: auto auto;
   background-clip: border-box;
