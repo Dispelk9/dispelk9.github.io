@@ -57,22 +57,22 @@ svg {
 }
 
 .text-copy:nth-child(2){
-	stroke: #83c8dd;
+	stroke: #231557;
 	animation-delay: -2s;
 }
 
 .text-copy:nth-child(3){
-	stroke: #0fb5c1;
+	stroke: #44107a;
 	animation-delay: -3s;
 }
 
 .text-copy:nth-child(4){
-	stroke: #BD0034;
+	stroke: #ff1361;
 	animation-delay: -4s;
 }
 
 .text-copy:nth-child(5){
-	stroke: #FDB731;
+	stroke: #fff800;
 	animation-delay: -5s;
 }
 
@@ -87,10 +87,10 @@ svg {
    text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #ffffff 0%,
-    #b0acb4 29%,
-    #595657 67%,
-    #0e0e0d 100%
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
   );
   background-size: auto auto;
   background-clip: border-box;
