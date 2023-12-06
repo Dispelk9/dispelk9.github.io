@@ -211,7 +211,7 @@ animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
 
 /* lineup class and keyframes */
 .lineUp {
-    animation: 2s anim-lineUp ease-out infinite;
+    animation: 2s anim-lineUp ease-out;
   }
   @keyframes anim-lineUp {
     0% {
