@@ -281,22 +281,22 @@ border-radius: calc(var(--line-w) / 2);
 /* columns*/
 
 /* row gaps */
-ul li:not(:last-child) {
+ul lix:not(:last-child) {
 margin-bottom: var(--row-gap);
 }
 
 /* card */
-/*ul li {
+ul lix {
 grid-column: 2;
 --inlineP: 1.5rem;
 margin-inline: var(--inlineP);
-grid-row: span 2;
-display: grid;
+/*grid-row: span 2;
+display: grid;*/
 grid-template-rows: min-content min-content min-content;
-}*/
+}
 
 /* date */
-ul li .date {
+ul lix .date {
 --dateH: 3rem;
 height: var(--dateH);
 margin-inline: calc(var(--inlineP) * -1);
@@ -316,7 +316,7 @@ border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
 }
 
 /* date flap */
-ul li .date::before {
+ul lix .date::before {
 content: "";
 width: var(--inlineP);
 aspect-ratio: 1;
@@ -330,7 +330,7 @@ right: 0;
 }
 
 /* circle */
-ul li .date::after {
+ul lix .date::after {
 content: "";
 position: absolute;
 width: 2rem;
@@ -345,26 +345,26 @@ right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
 
 /* title descr */
-ul li .title,
-ul li .descr {
+ul lix .title,
+ul lix .descr {
 background: var(--bgColor);
 position: relative;
 padding-inline: 1.5rem;
 }
-ul li .title {
+ul lix .title {
 overflow: hidden;
 padding-block-start: 1.5rem;
 padding-block-end: 1rem;
 font-weight: 500;
 }
-ul li .descr {
+ul lix .descr {
 padding-block-end: 1.5rem;
 font-weight: 300;
 }
 
 /* shadows */
-ul li .title::before,
-ul li .descr::before {
+ul lix .title::before,
+ul lix .descr::before {
 content: "";
 position: absolute;
 width: 90%;
@@ -375,11 +375,11 @@ border-radius: 50%;
 filter: blur(4px);
 transform: translate(-50%, 50%);
 }
-ul li .title::before {
+ul lix .title::before {
 bottom: calc(100% + 0.125rem);
 }
 
-ul li .descr::before {
+ul lix .descr::before {
 z-index: -1;
 bottom: 0.25rem;
 }
@@ -391,28 +391,28 @@ grid-template-columns: 1fr var(--line-w) 1fr;
 ul::before {
 grid-column: 2;
 }
-ul li:nth-child(odd) {
+ul lix:nth-child(odd) {
 grid-column: 1;
 }
-ul li:nth-child(even) {
+ul lix:nth-child(even) {
 grid-column: 3;
 }
 
 /* start second card */
-ul li:nth-child(2) {
+ul lix:nth-child(2) {
 grid-row: 2/4;
 }
 
-ul li:nth-child(odd) .date::before {
+ul lix:nth-child(odd) .date::before {
 clip-path: polygon(0 0, 100% 0, 100% 100%);
 left: 0;
 }
 
-ul li:nth-child(odd) .date::after {
+ul lix:nth-child(odd) .date::after {
 transform: translate(-50%, -50%);
 left: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
-ul li:nth-child(odd) .date {
+ul lix:nth-child(odd) .date {
 border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
 }
 }
