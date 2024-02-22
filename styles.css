@@ -449,7 +449,7 @@ color: var(--color);
 
 /*--fa icon *--/
  /* Style all font awesome icons */
- .fa {
+ .fa-own {
   padding: 20px;
   font-size: 30px;
   width: 30px;
@@ -459,7 +459,7 @@ color: var(--color);
 }
 
 /* Add a hover effect if you want */
-.fa:hover {
+.fa-own:hover {
   opacity: 0.7;
 }
 
