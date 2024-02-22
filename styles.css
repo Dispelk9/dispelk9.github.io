@@ -499,7 +499,7 @@ footer-dark h3 {
   text-align:center;
 }
 
-@media (max-width:991px) {
+@media (max-width:300px) {
   .footer-dark .item.social {
     text-align:center;
     margin-top:20px;
