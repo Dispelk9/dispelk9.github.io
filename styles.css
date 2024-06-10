@@ -2,6 +2,11 @@
 nav[data-toggle="toc"] {
     top: 42px;
 }
+
+.navbar-brand {
+  color: white !important;
+}
+
 body{
   background:url('images/background_blk.png') no-repeat center center fixed;
   -webkit-background-size:cover;
