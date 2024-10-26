@@ -363,7 +363,8 @@
                                             note: add public_key on Gitlab<br/>
                                             <div class="alert alert-info" role="alert">
                                                 <code>
-                                                    ssh-keygen<br/>
+                                                    ssh-keygen -t 4096 -b rsa<br/>
+						    #should use password then using agent to add the private key<br/>
                                                     eval "$(ssh-agent -s)"<br/>
                                                     ssh-add private_key<br/>
                                                     git clone remote_repo<br/>
