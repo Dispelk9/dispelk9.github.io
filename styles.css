@@ -21,6 +21,7 @@ body{
     bottom: 20px;
     right: 20px;
     display: none;
+    z-index: 9999; /* Ensure the button is above other elements like the footer */
 }
 
 /*Googlemap in about */
