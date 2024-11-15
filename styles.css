@@ -24,6 +24,17 @@ body{
     z-index: 9999; /* Ensure the button is above other elements like the footer */
 }
 
+footer {
+  padding: 20px;
+  backdrop-filter: blur(8px); /* Adds blur effect */
+  -webkit-backdrop-filter: blur(8px); /* For Safari compatibility */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  position: relative; /* Keep footer in normal flow */
+  z-index: 1; /* Footer layer below button */
+}
+
+
+
 /*Googlemap in about */
 .google-map {
     padding-bottom: 50%;
