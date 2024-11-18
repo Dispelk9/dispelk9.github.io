@@ -33,7 +33,9 @@ footer {
   z-index: 1; /* Footer layer below button */
 }
 
-
+.icon-expertise i {
+  font-size: 4em;
+}
 
 /*Googlemap in about */
 .google-map {
