@@ -26,12 +26,12 @@ html, body {
 }
 
 body {
+  height: 100vh; /* Full viewport height */
+  margin: 0;
   background: url('images/background_blk.png') no-repeat center center;
   background-size: contain;
-  margin: 0;
-  padding: 0;
+  background-color: #add8e6; /* Pastel blue background */
 }
-
 footer {
   padding: 20px;
   backdrop-filter: blur(8px); /* Adds blur effect */
