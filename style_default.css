@@ -13,7 +13,7 @@ body{
   -moz-background-size:cover;
   -o-background-size: cover;
   background-size: cover;
-  backdrop-filter: blur(5px);
+  /*backdrop-filter: blur(5px);*/
 }
 
 footer {
