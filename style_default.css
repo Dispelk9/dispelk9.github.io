@@ -1,0 +1,26 @@
+/*Styles css for dispelk9.github.io*/
+nav[data-toggle="toc"] {
+    top: 42px;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+body{
+  background:url('images/background_blk.png') no-repeat center center fixed;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size: cover;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+}
+
+footer {
+    padding: 20px;
+    backdrop-filter: blur(8px); /* Adds blur effect */
+    -webkit-backdrop-filter: blur(8px); /* For Safari compatibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    position: relative; /* Keep footer in normal flow */
+    z-index: 1; /* Footer layer below button */
+  }
