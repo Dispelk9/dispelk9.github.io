@@ -27,7 +27,7 @@ html, body {
 
 body {
   background: url('images/background_blk.png') no-repeat center center;
-  background-size: cover;
+  background-size: contain;
   margin: 0;
   padding: 0;
 }
