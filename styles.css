@@ -21,11 +21,6 @@ body{
   bottom: 20px;
   right: 20px;
   z-index: 9999;
-  display: none; /* Start hidden */
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
