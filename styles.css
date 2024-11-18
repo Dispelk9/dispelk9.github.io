@@ -26,7 +26,8 @@ html, body {
 }
 
 body {
-  /*background: url('images/background_blk.png') no-repeat center center;*/
+  background: url('images/background_blk.png') center center;
+  background-repeat: repeat;
   background-size: cover;
   background-color: #add8e6; /* Pastel blue background */
 }
