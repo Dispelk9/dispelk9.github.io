@@ -377,6 +377,47 @@
                                             <div class="alert alert-info" role="alert">
                                                 <code>openssl s_client -connect MX:25 -tls1_2 -starttls smtp</code><br/>
                                             </div>
+                                            Check certificate chain of p7b<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>
+                                                    openssl pkcs7 -in certificate.p7b -print_certs -text
+                                                </code><br/>
+                                            </div>
+                                            Create private Key<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>
+                                                    openssl genrsa -out example.key 4096
+                                                </code><br/>
+                                            </div>
+                                            Example config.req<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>
+                                                    [ req ]<br/>
+                                                    default_bits       = 2048<br/>
+                                                    prompt             = no<br/>
+                                                    default_md         = sha256<br/>
+                                                    distinguished_name = req_distinguished_name<br/>
+                                                    req_extensions     = req_ext<br/>
+
+                                                    [ req_distinguished_name ]<br/>
+                                                    C  = US<br/>
+                                                    ST = California<br/>
+                                                    L  = San Francisco<br/>
+                                                    O  = My Company<br/>
+                                                    OU = My Department<br/>
+                                                    CN = example.com<br/>
+
+                                                    [ req_ext ]<br/>
+                                                    subjectAltName = @alt_names<br/>
+
+                                                    [ alt_names ]<br/>
+                                                    DNS.1 = example.com<br/>
+                                                    DNS.2 = www.example.com<br/>
+                                                    DNS.3 = api.example.com<br/>
+                                                    IP.1  = 192.168.1.1<br/>
+                                                    IP.2  = 10.0.0.1<br/>
+                                                </code><br/>
+                                            </div>
                                         </p>
                                     <h5 class="text-left" id="Misc">Misc.</h5>
                                         <p align="justify">
