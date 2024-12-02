@@ -142,7 +142,7 @@
                                             play with a container<br/>
                                             <div class="alert alert-info" role="alert">
                                                 <code>
-                                                    docker exec -it analytical_tools-db-postgres-1 postgres<br/>
+                                                    docker exec -it act_docker-db-1 psql -U postgres -d postgres<br/>
                                                     docker exec -it analytical_tools-act-app-1 /bin/bash<br/>
                                                     docker logs -f analytical_tools-act-app-1<br/>
                                                 </code>
@@ -151,6 +151,15 @@
                                             <div class="alert alert-info" role="alert">
                                                 <code>
                                                     docker exec analytical_tools-act-app-1 pkill gunicorn<br/>
+                                                </code>
+                                            </div>
+                                            docker compose stuff<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                if volumes should be removed otherwise do not use<br/>
+                                                <code>
+                                                    docker-compose down --volumes<br/>
+                                                    docker-compose build --no-cache<br/>
+                                                    docker-compose up (-d if want to detach)<br/>
                                                 </code>
                                             </div>
                                         </p>
