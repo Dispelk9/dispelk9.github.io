@@ -139,6 +139,20 @@
                                                     docker run --rm -h "deb11" -ti vhodeb11:latest /bin/bash<br/>
                                                 </code>
                                             </div>
+                                            play with a container<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>
+                                                    docker exec -it analytical_tools-db-postgres-1 postgres<br/>
+                                                    docker exec -it analytical_tools-act-app-1 /bin/bash<br/>
+                                                    docker logs -f analytical_tools-act-app-1<br/>
+                                                </code>
+                                            </div>
+                                            pkill gunicorn in docker<br/>
+                                            <div class="alert alert-info" role="alert">
+                                                <code>
+                                                    docker exec analytical_tools-act-app-1 pkill gunicorn<br/>
+                                                </code>
+                                            </div>
                                         </p>
                                     <h5 class="text-left" id="Git">Git</h5>
                                         <p align="justify">
@@ -378,10 +392,22 @@
                                             <div class="alert alert-info" role="alert">
                                                 <code>
                                                     ssh-keygen -t 4096 -b rsa<br/>
-						    #should use password then using agent to add the private key<br/>
+						                            #should use password then using agent to add the private key<br/>
                                                     eval "$(ssh-agent -s)"<br/>
                                                     ssh-add private_key<br/>
                                                     git clone remote_repo<br/>
+                                                </code>
+                                                auto ask private key when login<br/>
+                                                <code>
+                                                    vi .bashrc and add these lines<br/>
+                                                    #auto ssh-key<br/>
+                                                    if [ ! -S ~/.ssh/ssh_auth_sock ]; then<br/>
+                                                    eval `ssh-agent`<br/>
+                                                    ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock<br/>
+                                                    fi<br/>
+                                                    export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock<br/>
+                                                    ssh-add -l > /dev/null || ssh-add<br/>
+                                                    relogin the server<br/>
                                                 </code>
                                             </div>
                                             Profiling to optimize app runtime<br/>
