@@ -14,6 +14,48 @@ html, body {
   padding: 0;
 }
 
+/* Ensure dropdown menu is hidden by default */
+.nav-item .dropdown-menu {
+  display: none; /* Hide by default */
+  opacity: 0;    /* Transparent for fade effect */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+  background-color: #343a40; /* Dark background */
+  color: #ffffff;           /* White text */
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown-menu {
+  display: block; /* Make it visible */
+  opacity: 1;     /* Fully opaque */
+}
+
+/* Ensure the dropdown is positioned correctly */
+.dropdown-menu {
+  position: absolute; /* Keep it aligned under the parent */
+  top: 100%;          /* Place right below the parent link */
+  left: 0;
+  z-index: 1000;      /* Ensure it is above other elements */
+}
+
+/* Adjust individual dropdown items */
+.dropdown-item {
+  color: #ffffff; /* White text for each item */
+  padding: 10px 20px; /* Add some padding for better spacing */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Add hover effect for dropdown items */
+.dropdown-item:hover {
+  background-color: #495057; /* Slightly lighter dark shade */
+  color: #ffffff;           /* Keep text white */
+}
+
+/* Optional: Add divider styling */
+.dropdown-divider {
+  border-color: rgba(255, 255, 255, 0.15); /* Light divider color */
+}
+
+
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
