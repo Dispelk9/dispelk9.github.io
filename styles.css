@@ -7,27 +7,6 @@ nav[data-toggle="toc"] {
   color: white !important;
 }
 
-/* Ensure dropdown menu is hidden by default */
-.nav-item .dropdown-menu {
-  display: none; /* Hide by default */
-  opacity: 0;    /* Transparent for fade effect */
-  transition: opacity 0.3s ease-in-out; /* Smooth transition */
-}
-
-/* Show dropdown on hover */
-.nav-item:hover .dropdown-menu {
-  display: block; /* Make it visible */
-  opacity: 1;     /* Fully opaque */
-}
-
-/* Ensure the dropdown is positioned correctly */
-.dropdown-menu {
-  position: absolute; /* Keep it aligned under the parent */
-  top: 100%;          /* Place right below the parent link */
-  left: 0;
-  z-index: 1000;      /* Ensure it is above other elements */
-}
-
 html, body {
   height: 100%; /* Allow the page to scroll */
   overflow: visible; /* Ensure fixed elements behave correctly */
