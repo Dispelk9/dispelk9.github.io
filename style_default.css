@@ -9,11 +9,9 @@ nav[data-toggle="toc"] {
 
 body{
   background:url('images/About_VHO2.png') no-repeat center center;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size: cover;
   background-size: auto;
-  backdrop-filter: blur(5px);
+  background-color: #add8e6; /* Pastel blue background */
+}
 }
 
 footer {
