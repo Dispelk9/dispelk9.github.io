@@ -8,12 +8,10 @@ nav[data-toggle="toc"] {
 }
 
 body{
-  background:url('images/background_blk.png') no-repeat center center;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size: cover;
-  background-size: cover;
-  backdrop-filter: blur(5px);
+  background:url('images/About_VHO3.png') no-repeat center center;
+  background-size: auto;
+  background-color: black; /* Pastel blue background */
+}
 }
 
 footer {
