@@ -21,3 +21,56 @@ footer {
     position: relative; /* Keep footer in normal flow */
     z-index: 1; /* Footer layer below button */
 }
+
+
+
+  /* Timeline Styling */
+  .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .timeline li {
+    position: relative;
+    padding-left: 25px;
+    border-left: 4px solid var(--accent-color, #333);
+    margin-left: 10px;
+  }
+
+  .timeline li::before {
+    content: "•";
+    color: var(--accent-color, #333);
+    font-size: 24px;
+    position: absolute;
+    left: -8px;
+    top: 5px;
+  }
+
+  .date {
+    font-weight: bold;
+    color: var(--accent-color, #333);
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  /* Link Styling: Remove underline & add hover effect */
+  .title a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease-in-out;
+  }
+
+  .title a:hover {
+    border-bottom: 2px solid var(--accent-color, #333);
+  }
