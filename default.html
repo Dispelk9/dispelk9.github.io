@@ -19,7 +19,7 @@
         <script>
             // Load Navbar
             document.addEventListener("DOMContentLoaded", function () {
-              fetch("navbar.html") // ✅ Load navbar.html
+              fetch("navbar.html") 
                 .then(response => response.text())
                 .then(html => {
                   document.getElementById("navbar-container").innerHTML = html;
@@ -29,6 +29,8 @@
     </head>
 
     <body>
+        <!-- Navbar Container -->
+        <div id="navbar-container"></div>
         <div style="height: 2000px;">Test Content</div>
         <div style="height: 2000px;">Test Content 2</div>
         <div class="center">End of page bo Body</div>
