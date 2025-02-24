@@ -68,7 +68,7 @@ html, body {
 }
 
 body {
-  background: url('images/background_blk.png') center center;
+  background: url('../images/background_blk.png') center center;
   background-repeat: repeat;
   background-size: cover;
   background-color: black; 
