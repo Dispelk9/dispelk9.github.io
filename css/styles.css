@@ -67,12 +67,12 @@ html, body {
   border-radius: 5px;
 }
 
-body {
+/* body {
   background: url('../images/background_blk.png') center center;
   background-repeat: repeat;
   background-size: cover;
   background-color: black; 
-}
+} */
 footer {
   padding: 20px;
   backdrop-filter: blur(8px); /* Adds blur effect */
