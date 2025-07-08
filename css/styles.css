@@ -347,3 +347,33 @@ span:nth-child(n) {
 .credits a {
   color: var(--color);
 }
+
+
+.intro-section {
+  position: relative;
+  background-image: url('../images/snow.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.intro-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+  z-index: 1;
+}
+
+.intro-section .intro-text {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
