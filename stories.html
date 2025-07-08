@@ -10,27 +10,63 @@
         <!-- Navbar Container -->
         <div id="navbar-container"></div>
         
-        <div class="container my-4">
-            <div class="row justify-content-center">
-                <h1 align="center" class="animate-documentation">
-                    Stories
-                </h1>
-                <div class="col-lg mx-2 align-self-center">
-                    <div class="my-3 text-white">
-                            <p align="center">
-                                Welcome to my stories: Your Source for IT Knowledge and Innovation<br/>
 
-                                In today's rapidly evolving digital landscape, 
-                                staying informed about the latest developments in information technology 
-                                is more important than ever. 
-                                Whether you're a seasoned IT professional, an aspiring tech enthusiast, 
-                                or a business leader looking to leverage technology for competitive advantage<br/>
-                                my blog is here to provide you with the knowledge and insights you need.<br/>
+        
+        <!-- Full-width Intro Section for "Stories" -->
+        <div class="intro-section-stories text-white text-center">
+        <div class="overlay"></div>
+        <div class="intro-text lineUp">
+            <div class="container">
+            <h1 class="animate-documentation">Stories</h1>
+            <p>
+                Welcome to my stories: Your Source for IT Knowledge and Innovation<br/><br/>
+
+                In today's rapidly evolving digital landscape, 
+                staying informed about the latest developments in information technology 
+                is more important than ever.<br/>
+                Whether you're a seasoned IT professional, an aspiring tech enthusiast, 
+                or a business leader looking to leverage technology for competitive advantage,<br/>
+                my blog is here to provide you with the knowledge and insights you need.
+            </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="p-3 mb-2 bg-dark text-white">
+            <div class="container-sm my-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg mb-lg-4">
+                    </div>
+                    <div class="col-lg mx-2 align-self-center text-white">
+                        <div class="my-3">
+                            <span><h1 class="text-center">Datapipeline: Is this CI/CD?</h1></span>
+                            <p class="lineUp" align="justify">
+                                08.July.2025<br/>
+                                The request to update the database daily made me how to create a pipeline.<br/>
+                                In this request I have to create a SQL dump from a active repository which changed daily<br/>
+                                This repository contains a lots of information which are essential for the INFOSEC but they can not access them directly
+                                therefore we need to upload them to a GUI which they as users can access daily using their own credential.<br/>
+                                For this pipeline, I will use the Gitlab CICD, which hold that repository, adjust the gitlab_ci to create an task:<br/>
+                                - Using docker to import the repository using gitlab runner, using import script to import all yaml files in this repo 
+                                and convert them to proper table.<br/>
+                                - after the database is created, extract that database as the dump file and saved them as artifacts.<br/>
+                                - create another task to upload that to S3.<br/>
+                                <br/>
+                                When the file is upload to S3, there are two options to restore them to Aurora/RDS<br/>
+                                - Using AWS EC2 and using AWS CLI there to do the restore, because the RDS and other components are in the private VPC, therefore
+                                we cannot just use AWS CLI locally, which make unnecessary provisioning a EC2 just for that.<br/>
+                                - Using AwS Lambda with a self-created layer (Using Dockerfile) for import using python <br/>
+                                With the new Lambda, it can get an trigger from S3 whenever S3 get the new artifacts, it will run this Python script to restore the 
+                                new data to RDS<br/>
+                                
+                                Then last thing to do is schedule the pipeline x2 daily on Gitlab CICD<br/>
+                                Now you have a complete Gitlab Pipeline including #s3#gitlab_ci#aws_lambda#aws_aurora_rds#python#Docker<br/>
                             </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>    
         <div class="container my-4 text-white">
             <div class="container-sm my-4">
                 <div class="row justify-content-center">
