@@ -1,6 +1,6 @@
-/*Styles css for dispelk9.github.io*/
+/* Styles for dispelk9.github.io */
 nav[data-toggle="toc"] {
-    top: 42px;
+  top: 42px;
 }
 
 .navbar-brand {
@@ -8,352 +8,198 @@ nav[data-toggle="toc"] {
 }
 
 html, body {
-  height: 100%; /* Allow the page to scroll */
-  overflow: visible; /* Ensure fixed elements behave correctly */
+  height: 100%;
+  overflow: visible;
   margin: 0;
   padding: 0;
+  background-repeat: repeat;
+  background-size: cover;
+  background-color: black;
 }
 
-/* Ensure dropdown menu is hidden by default */
 .nav-item .dropdown-menu {
-  display: none; /* Hide by default */
-  opacity: 0;    /* Transparent for fade effect */
-  transition: opacity 0.3s ease-in-out; /* Smooth transition */
-  background-color: #343a40; /* Dark background */
-  color: #ffffff;           /* White text */
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #343a40;
+  color: #ffffff;
 }
 
-/* Show dropdown on hover */
 .nav-item:hover .dropdown-menu {
-  display: block; /* Make it visible */
-  opacity: 1;     /* Fully opaque */
+  display: block;
+  opacity: 1;
 }
 
-/* Ensure the dropdown is positioned correctly */
 .dropdown-menu {
-  position: absolute; /* Keep it aligned under the parent */
-  top: 100%;          /* Place right below the parent link */
+  position: absolute;
+  top: 100%;
   left: 0;
-  z-index: 1000;      /* Ensure it is above other elements */
+  z-index: 1000;
 }
 
-/* Adjust individual dropdown items */
 .dropdown-item {
-  color: #ffffff; /* White text for each item */
-  padding: 10px 20px; /* Add some padding for better spacing */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  color: #ffffff;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
 }
 
-/* Add hover effect for dropdown items */
 .dropdown-item:hover {
-  background-color: #495057; /* Slightly lighter dark shade */
-  color: #ffffff;           /* Keep text white */
+  background-color: #495057;
+  color: #ffffff;
 }
 
-/* Optional: Add divider styling */
 .dropdown-divider {
-  border-color: rgba(255, 255, 255, 0.15); /* Light divider color */
+  border-color: rgba(255, 255, 255, 0.15);
 }
-
 
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 9999; /* Ensures it's above other elements */
+  z-index: 9999;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
 }
 
-body {
-  background: url('../images/background_blk.png') center center;
-  background-repeat: repeat;
-  background-size: cover;
-  background-color: black; 
-}
-
 footer {
   padding: 20px;
-  backdrop-filter: blur(8px); /* Adds blur effect */
-  -webkit-backdrop-filter: blur(8px); /* For Safari compatibility */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-  position: relative; /* Keep footer in normal flow */
-  z-index: 1; /* Footer layer below button */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
 }
 
-/*Googlemap in about */
+/* Google Map in About */
 .google-map {
-    padding-bottom: 50%;
-    position: relative;
+  padding-bottom: 50%;
+  position: relative;
 }
 .google-map iframe {
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
 }
 
-
-/*Change pictures in index*/
+/* Carousel */
 .carousel-item {
-    transition: transform 2.6s ease-in-out;
+  transition: transform 2.6s ease-in-out;
 }
-
 .carousel-fade .active.carousel-item-start,
 .carousel-fade .active.carousel-item-end {
-    transition: opacity 0s 2.6s;
+  transition: opacity 0s 2.6s;
 }
 
-
-/*Animation for my skills*/
+/* Animated Skills SVG */
 svg {
-    display: block;
-    font: 10.5em 'Montserrat';
-    width: auto;
-    height: auto;
-    margin: 0 auto;
+  display: block;
+  font: 10.5em 'Montserrat';
+  width: auto;
+  height: auto;
+  margin: 0 auto;
 }
 
 .text-copy {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 6% 29%;
-    stroke-width: 5px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 5.5s infinite linear;
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
 }
 
-.text-copy:nth-child(1){
-	stroke: #e89349;
-	animation-delay: -1;
+.text-copy:nth-child(1) { stroke: #e89349; animation-delay: -1s; }
+.text-copy:nth-child(2) { stroke: #83e849; animation-delay: -2s; }
+.text-copy:nth-child(3) { stroke: #2199cc; animation-delay: -3s; }
+.text-copy:nth-child(4) { stroke: #ff1361; animation-delay: -4s; }
+.text-copy:nth-child(5) { stroke: #fff800; animation-delay: -5s; }
+
+@keyframes stroke-offset {
+  50% { stroke-dashoffset: -35%; }
 }
 
-.text-copy:nth-child(2){
-	stroke: #83e849;
-	animation-delay: -2s;
-}
-
-.text-copy:nth-child(3){
-	stroke: #2199cc;
-	animation-delay: -3s;
-}
-
-.text-copy:nth-child(4){
-	stroke: #ff1361;
-	animation-delay: -4s;
-}
-
-.text-copy:nth-child(5){
-	stroke: #fff800;
-	animation-delay: -5s;
-}
-
-@keyframes stroke-offset{
-	50% {stroke-dashoffset: -35%;}
-}
-
-/*====================================*/
-/*Animation for Hey I'm Viet Hoang*/
-.animate-character
-{
-   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: auto auto;
+/* Animated Headings */
+.animate-character,
+.animate-documentation {
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
   background-clip: border-box;
   background-size: 200% auto;
   color: #fff;
-  background-clip: text;
-  /* text-fill-color: transparent; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 100px;
+}
+
+.animate-character {
+  animation: textclip 2s linear infinite;
+  font-size: 100px;
+}
+
+.animate-documentation {
+  animation: textclip_ani 2s linear infinite;
+  font-size: 30px;
 }
 
 @keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
+  to { background-position: 200% center; }
 }
-
-/*====================================*/
-
-/*====================================*/
-/*Animation for Documentation*/
-.animate-documentation
-{
-   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  /* text-fill-color: transparent; */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip_ani 2s linear infinite;
-  display: inline-block;
-      font-size: 30px;
-}
-
 @keyframes textclip_ani {
-  to {
-    background-position: 200% center;
-  }
+  to { background-position: 200% center; }
 }
 
-/*====================================*/
+/* Spacer */
 .spacer {
-    height: 50vh;
-    background-color: #000;
+  height: 50vh;
+  background-color: #000;
 }
 
-/*Fade in Text Animation for index*/
-@keyframes scale {
-    100% {
-      transform: scale(1);
-    }
-}
-
+/* Fade-in text animation */
 span {
-display: inline-block;
-opacity: 0;
-filter: blur(4px);
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
 }
 
-span:nth-child(1) {
-animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(2) {
-animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(3) {
-animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(4) {
-animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(5) {
-animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(6) {
-animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(7) {
-animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(8) {
-animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(9) {
-animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(10) {
-animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(11) {
-animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(12) {
-animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(13) {
-animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(14) {
-animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(15) {
-animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(16) {
-animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(17) {
-animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(18) {
-animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+span:nth-child(n) {
+  animation: fade-in 0.8s calc(0.1s * var(--n)) forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 @keyframes fade-in {
-100% {
+  100% {
     opacity: 1;
     filter: blur(0);
-}
+  }
 }
 
-/* lineup class and keyframes */
+/* Lineup animation */
 .lineUp {
-    animation: 2s anim-lineUp ease-out;
-  }
-  @keyframes anim-lineUp {
-    0% {
-      opacity: 0;
-      transform: translateY(80%);
-    }
-    20% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
+  animation: 2s anim-lineUp ease-out;
+}
+@keyframes anim-lineUp {
+  0%   { opacity: 0; transform: translateY(80%); }
+  20%  { opacity: 0; }
+  50%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 
- /* Timeline */
- #aul {
+/* Timeline */
+#aul {
   --col-gap: 2rem;
   --row-gap: 2rem;
   --line-w: 0.25rem;
   display: grid;
   grid-template-columns: var(--line-w) 1fr;
-  grid-auto-columns: max-content;
   column-gap: var(--col-gap);
   list-style: none;
   width: min(60rem, 90%);
   margin-inline: auto;
 }
 
-/* Line */
 #aul::before {
   content: "";
   grid-column: 1;
@@ -362,12 +208,10 @@ animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   border-radius: calc(var(--line-w) / 2);
 }
 
-/* Row Gaps */
 #aul li:not(:last-child) {
   margin-bottom: var(--row-gap);
 }
 
-/* Card */
 #aul li {
   grid-column: 2;
   --inlineP: 1.5rem;
@@ -377,7 +221,6 @@ animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   grid-template-rows: min-content min-content min-content;
 }
 
-/* Date */
 #aul li .date {
   --dateH: 3rem;
   height: var(--dateH);
@@ -393,7 +236,6 @@ animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
 }
 
-/* Date Flap */
 #aul li .date::before {
   content: "";
   width: var(--inlineP);
@@ -406,7 +248,6 @@ animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   right: 0;
 }
 
-/* Circle */
 #aul li .date::after {
   content: "";
   position: absolute;
@@ -420,7 +261,6 @@ animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
 
-/* Title & Description */
 #aul li .title,
 #aul li .descr {
   background: var(--bgColor);
@@ -435,7 +275,6 @@ animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   font-weight: 500;
 }
 
-/* Improved Link Styling */
 #aul li .title a {
   color: inherit;
   text-decoration: none;
@@ -449,7 +288,6 @@ animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   border-bottom: 2px solid var(--accent-color);
 }
 
-/* Shadows */
 #aul li .title::before,
 #aul li .descr::before {
   content: "";
@@ -472,45 +310,39 @@ animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   bottom: 0.25rem;
 }
 
-/* Responsive Two-Column Layout */
 @media (min-width: 40rem) {
   #aul {
-      grid-template-columns: 1fr var(--line-w) 1fr;
+    grid-template-columns: 1fr var(--line-w) 1fr;
   }
   #aul::before {
-      grid-column: 2;
+    grid-column: 2;
   }
   #aul li:nth-child(odd) {
-      grid-column: 1;
+    grid-column: 1;
   }
   #aul li:nth-child(even) {
-      grid-column: 3;
+    grid-column: 3;
   }
   #aul li:nth-child(2) {
-      grid-row: 2/4;
+    grid-row: 2 / 4;
   }
-
   #aul li:nth-child(odd) .date::before {
-      clip-path: polygon(0 0, 100% 0, 100% 100%);
-      left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
   }
-
   #aul li:nth-child(odd) .date::after {
-      transform: translate(-50%, -50%);
-      left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
   }
-
   #aul li:nth-child(odd) .date {
-      border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
 }
-
 
 .credits {
-margin-top: 1rem;
-text-align: right;
+  margin-top: 1rem;
+  text-align: right;
 }
 .credits a {
-color: var(--color);
+  color: var(--color);
 }
-
