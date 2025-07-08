@@ -387,7 +387,7 @@ span:nth-child(n) {
   background-repeat: no-repeat;
   background-color: black;
   overflow: hidden;
-  padding: 200px 2rem;
+  padding: 500px 2rem;
 }
 
 .intro-section-stories .overlay {
