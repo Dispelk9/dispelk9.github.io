@@ -445,7 +445,7 @@ span:nth-child(n) {
   background-repeat: no-repeat;
   background-color: black;
   overflow: hidden;
-  padding: 250px 2rem;
+  min-height: 500px;
 }
 
 .intro-section-cs .overlay {
