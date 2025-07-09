@@ -416,7 +416,7 @@ span:nth-child(n) {
   background-repeat: no-repeat;
   background-color: black;
   overflow: hidden;
-  padding: 250px 2rem;
+  min-height: 500px;
 }
 
 .intro-section-about .overlay {
@@ -463,5 +463,24 @@ span:nth-child(n) {
   margin: 0 auto;
   font-size: 1.1rem;
   line-height: 1.7;
+}
+
+.contact-text {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #f1f1f1;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #f1f1f1;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3); /* optional subtle underline */
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #ffc107; /* or any accent color */
+  border-bottom: 1px solid #ffc107;
 }
 
