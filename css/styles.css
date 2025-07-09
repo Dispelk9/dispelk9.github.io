@@ -428,7 +428,7 @@ svg {
   background-repeat: no-repeat;
   background-color: black;
   overflow: hidden;
-  min-height: 500px;
+  padding: 100px 2rem;
 }
 
 .intro-section-cs .overlay {
