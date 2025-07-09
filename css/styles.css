@@ -3,6 +3,12 @@ nav[data-toggle="toc"] {
   top: 42px;
 }
 
+nav.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+
 .navbar-brand {
   color: white !important;
 }
