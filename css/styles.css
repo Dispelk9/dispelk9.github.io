@@ -410,7 +410,7 @@ span:nth-child(n) {
 .intro-section-about {
   position: relative;
   width: 100%;
-  background-image: url('../images/index_ansible.jpgs'); 
+  background-image: url('../images/index_ansible.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -435,3 +435,33 @@ span:nth-child(n) {
   font-size: 1.1rem;
   line-height: 1.7;
 }
+
+.intro-section-cs {
+  position: relative;
+  width: 100%;
+  background-image: url('../images/index_python.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  overflow: hidden;
+  padding: 250px 2rem;
+}
+
+.intro-section-cs .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.intro-section-cs .intro-text {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
