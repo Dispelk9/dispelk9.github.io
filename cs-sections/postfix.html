@@ -1,0 +1,28 @@
+<h5 class="text-left" id="Postfix/Mailing">Postfix/Mailing</h5>
+<p align="justify">
+    Bounce the mailx<br/>
+    <div class="alert alert-info" role="alert">
+        <code>mailq | grep mailx | awk '{print $1}' | while read i; do postsuper -d $i;done</code><br/>
+    </div>
+    Telnet to send mail through MX<br/>
+    <div class="alert alert-info" role="alert">
+        <code>telnet MX 25</code><br/>
+        <code>ehlo Domain</code><br/>
+        <code>MAIL FROM:</code><br/>
+        <code>RCPT TO:</code><br/>
+        <code>MAIL FROM: sender@example.com</code><br/>
+        <code>250 2.1.0 Sender OK</code><br/>
+        <code>RCPT TO: recipient@example.com</code><br/>
+        <code>250 2.1.5 Recipient OK</code><br/>
+        <code>DATA</code><br/>
+        <code>354 Start mail input; end with <CRLF>.<CRLF></code><br/>
+        <code>From: sender@example.com</code><br/>
+        <code>To: recipient@example.com</code><br/>
+        <code>Subject: Telnet email</code><br/>
+        <code>This is my first test message sent using the Telnet client on Windows</code><br/>
+        <code>.</code><br/>
+        <code>250 2.0.0 Ok: queued as ABC123456789</code><br/>
+        <code>QUIT</code><br/>
+        <code>221 2.0.0 Service closing transmission channel</code><br/>
+    </div>
+</p>

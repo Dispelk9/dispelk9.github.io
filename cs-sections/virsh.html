@@ -1,0 +1,27 @@
+<h5 class="text-left" id="Virsh">Virsh</h5>
+<p align="justify">
+    Destroy the LVM<br/>
+    <div class="alert alert-info" role="alert">
+        <code>virsh destroy</code><br/>
+        <code>virsh list</code><br/>
+        <code>virsh undefine</code><br/>
+        <code>virsh start</code><br/>
+    </div>
+    Get net-list<br/>
+    <div class="alert alert-info" role="alert">
+        <code>virsh net-list</code><br/>
+        Show:<br/>
+        Name<span class="tab"></span>State<span class="tab"></span>Autostart<span class="tab"></span>Persistent<br/>
+        --------------------------------------------<br/>
+        default<span class="tab"></span>active<span class="tab"></span>yes<span class="tab"></span>yes<br/>
+        subnet<span class="tab"></span>active<span class="tab"></span>yes<span class="tab"></span>yes<br/>
+    </div>
+    get IPs list<br/>
+    <div class="alert alert-info" role="alert">
+        <code>virsh net-dhcp-leases (default or subnet)</code><br/>
+    </div>
+    See console on vm server<br/>
+    <div class="alert alert-info" role="alert">
+        <code>virsh start --console "name_server"</code><br/>
+    </div>
+</p>

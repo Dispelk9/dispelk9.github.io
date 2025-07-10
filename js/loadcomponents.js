@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
     "git-section": "cs-sections/git.html",
     "vi-section": "cs-sections/vi.html",
     "restic-section": "cs-sections/restic.html",
+    "ansible-section": "cs-sections/ansible.html",
+    "virsh-section": "cs-sections/virsh.html", 
+    "postfix-section": "cs-sections/postfix.html",
+    "openssl-section": "cs-sections/openssl.html",
+    "misc-section": "cs-sections/misc.html",
     // Add more sections as needed
     };
 

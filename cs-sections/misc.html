@@ -1,0 +1,72 @@
+<h5 class="text-left" id="Misc">Misc.</h5>
+<p align="justify">
+    Right click paste in vim<br/>
+    <div class="alert alert-info" role="alert">
+        <code>:set mouse=</code><br/>
+    </div>
+    find diff two files and grep the difference<br/>
+    <div class="alert alert-info" role="alert">
+        <code>diff -c file1 file2| grep -E '^\+ ' >> file_diff</code><br/>
+    </div>
+    find size all file in a folder<br/>
+    <div class="alert alert-info" role="alert">
+        <code>du -sh *</code><br/>
+    </div>
+    check diskspace<br/>
+    <div class="alert alert-info" role="alert">
+        <code>df -h</code><br/>
+    </div>
+    gen key and put public key on Gitlab<br/>
+    note: add public_key on Gitlab<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            ssh-keygen -t 4096 -b rsa<br/>
+            #should use password then using agent to add the private key<br/>
+            eval "$(ssh-agent -s)"<br/>
+            ssh-add private_key<br/>
+            git clone remote_repo<br/>
+        </code>
+        auto ask private key when login<br/>
+        <code>
+            vi .bashrc and add these lines<br/>
+            #auto ssh-key<br/>
+            if [ ! -S ~/.ssh/ssh_auth_sock ]; then<br/>
+            eval `ssh-agent`<br/>
+            ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock<br/>
+            fi<br/>
+            export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock<br/>
+            ssh-add -l > /dev/null || ssh-add<br/>
+            relogin the server<br/>
+        </code>
+    </div>
+    Profiling to optimize app runtime<br/>
+    <div class="alert alert-info" role="alert">
+        <code>python -m cProfile pre-commit.py -s cummulative pre-commit.py</code><br/>
+    </div>
+    Find files<br/>
+    <div class="alert alert-info" role="alert">
+        note: add -delete to delete the found files<br/>
+        <code>find . -name "*.bak" -type f</code>
+    </div>
+    Zip files then delete<br/>
+    <div class="alert alert-info" role="alert">
+        <code>find . -mtime +67 -type f | grep name_file | xargs tar -czvf zipped_file.tar --remove-files</code><br/>
+    </div>
+    Update APT<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            sudo apt update<br/>
+            sudo apt list --upgradable<br/>
+            sudo apt upgrade -y<br/>
+        </code><br/>
+    </div>
+    Add vho to sudo<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            sudo usermod -a -G sudo vho<br/>
+            groups<br/>
+            vi /etc/sudoers<br/>
+            vho ALL=(ALL:ALL) ALL<br/>
+        </code><br/>
+    </div>
+</p>
