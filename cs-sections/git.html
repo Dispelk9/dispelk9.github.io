@@ -1,0 +1,64 @@
+<h5 class="text-left" id="Git">Git</h5>
+<p align="justify">
+    see local branches<br/>
+    <div class="alert alert-info" role="alert">
+        <code>git branch</code><br/>
+    </div>
+    see remote branches<br/>
+    <div class="alert alert-info" role="alert">
+        <code>git branch -r</code><br/>
+    </div>
+    delete a remote branch<br/>
+    <div class="alert alert-info" role="alert">
+        <code>git push origin --delete my-branch-name</code><br/>
+    </div>   
+    delete a local branch<br/>
+    <div class="alert alert-info" role="alert">
+        note: The -d option only deletes the branch if it has already been merged.<br/>
+        The -D option is a shortcut for --delete --force, which deletes the branch irrespective of its merged status.<br/>
+        <code>
+            git branch -d my-branch-name<br/>
+            git branch -D my-branch-name<br/>
+        </code>
+    </div>
+    change editor of git to vim<br/>
+    <div class="alert alert-info" role="alert">
+        <code>git config --global core.editor "vim"</code><br/>
+    </div>
+    check timestamp<br/>
+    <div class="alert alert-info" role="alert">
+        <code>git blame</code><br/>
+    </div>
+    amend specific commit<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            git rebase -i HEAD~3 for 3 latest commit<br/>
+            change to e(edit)<br/>
+            git commit --amend<br/>
+            git rebase --continue<br/>  
+        </code>
+    </div>
+    undo the merge<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            git merge --abort<br/>
+            git reset --merge<br/>
+        </code>
+    </div>
+    reset changes<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            git reset .<br/>
+            git restore .<br/>
+        </code>
+    </div>
+    cherry pick the commits<br/>
+    <div class="alert alert-info" role="alert">
+        go to production -> active branch<br/>
+        <code>
+            git cherry pick commit<br/>
+        </code>
+        commit from branch test<br/>
+        git push to create merge request<br/>
+    </div>
+</p>

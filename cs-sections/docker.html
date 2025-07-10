@@ -1,0 +1,62 @@
+<h5 class="text-left" id="Docker">Docker</h5>
+<p align="justify">
+    build new images<br/>
+    <div class="alert alert-info" role="alert">
+        <code>docker build -t new_images .</code><br/>
+    </div>
+    show docker images<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            docker images<br/>
+            docker image rm<br/>
+        </code>
+    </div>
+    show all container<br/>
+    <div class="alert alert-info" role="alert">
+        <code>docker ps -a</code><br/>
+    </div>   
+    remove all containers<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            docker rm $(docker ps -aq)<br/>
+        </code>
+    </div>
+    run existing container<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            docker start "container"<br/>
+            docker attach "container"<br/>
+        </code>
+    </div>
+    run new container<br/>
+    <div class="alert alert-info" role="alert">
+        vhodeb11:latest image<br/>
+        --rm to remove container after exit<br/>
+        <code>
+            docker run --rm -h "deb11" -ti vhodeb11:latest /bin/bash<br/>
+        </code>
+    </div>
+    play with a container<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            docker exec -it act_docker-db-1 psql -U postgres -d postgres<br/>
+            docker exec -it analytical_tools-act-app-1 /bin/bash<br/>
+            docker logs -f analytical_tools-act-app-1<br/>
+        </code>
+    </div>
+    pkill gunicorn in docker<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            docker exec analytical_tools-act-app-1 pkill gunicorn<br/>
+        </code>
+    </div>
+    docker compose stuff<br/>
+    <div class="alert alert-info" role="alert">
+        if volumes should be removed otherwise do not use<br/>
+        <code>
+            docker-compose down --volumes<br/>
+            docker-compose build --no-cache<br/>
+            docker-compose up (-d if want to detach)<br/>
+        </code>
+    </div>
+</p>

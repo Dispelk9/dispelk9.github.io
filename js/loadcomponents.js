@@ -13,4 +13,23 @@ document.addEventListener("DOMContentLoaded", function () {
             new bootstrap.Dropdown(dropdownToggleEl);
         });
     });
+
+     const includes = {
+    "docker-section": "cs-sections/docker.html",
+    "git-section": "cs-sections/git.html",
+    "vi-section": "cs-sections/vi.html",
+    "restic-section": "cs-sections/restic.html",
+    // Add more sections as needed
+    };
+
+    for (const [id, file] of Object.entries(includes)) {
+        const target = document.getElementById(id);
+        if (target) {
+        fetch(file)
+            .then(res => res.text())
+            .then(html => {
+            target.innerHTML = html;
+            });
+        }
+    }
 });

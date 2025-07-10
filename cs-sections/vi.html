@@ -1,0 +1,34 @@
+<h5 class="text-left" id="Vi">Vi/Vim (incase you aren't nanoboy)</h5>
+<p align="justify">
+    remove empty lines<br/>
+    <div class="alert alert-info" role="alert">
+        <code>:g/^$/d</code><br/>
+    </div>
+    remove line with "text"<br/>
+    <div class="alert alert-info" role="alert">
+        <code>:g/text/d</code><br/>
+    </div>
+    remove line with ./<br/>
+    <div class="alert alert-info" role="alert">
+        <code>:g/\.\//d</code><br/>
+    </div>
+    remove all lines not contain foo<br/>
+    <div class="alert alert-info" role="alert">
+        <code>:g!/foo/d</code><br/>
+    </div>
+    remove unwanted space in vim<br/>
+    <div class="alert alert-info" role="alert">
+        <code>:%s/\s\+$//e</code><br/>
+    </div>
+    search and replace with range from line 8 to 10(Note: ^I = Tab)<br/>
+    <div class="alert alert-info" role="alert">
+        <code>:8,10 s/search/replace/g</code><br/>
+    </div>
+    Add spaces at the begins of lines<br/>
+    <div class="alert alert-info" role="alert">
+        1.Ctr+V in to visual block then<br/>
+        <code>:'<,'>s/^/      /</code><br/>
+        or<br/>
+        2.Ctr+V then shift+i then add the things you want<br/>
+    </div>
+</p>
