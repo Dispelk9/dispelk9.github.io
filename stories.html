@@ -42,25 +42,54 @@
                             <h1 class="text-center">#Data#pipeline: Is this CI/CD?</h1>
                             <p class="lineUp" align="justify">
                                 08.July.2025<br/>
-                                The request to update the database daily made me how to create a pipeline.<br/>
-                                In this request I have to create a SQL dump from a active repository which changed daily<br/>
-                                This repository contains a lots of information which are essential for the INFOSEC but they can not access them directly
-                                therefore we need to upload them to a GUI which they as users can access daily using their own credential.<br/>
-                                For this pipeline, I will use the Gitlab CICD, which hold that repository, adjust the gitlab_ci to create an task:<br/>
-                                - Using docker to import the repository using gitlab runner, using import script to import all yaml files in this repo 
-                                and convert them to proper table.<br/>
-                                - after the database is created, extract that database as the dump file and saved them as artifacts.<br/>
-                                - create another task to upload that to S3.<br/>
-                                <br/>
-                                When the file is upload to S3, there are two options to restore them to Aurora/RDS<br/>
-                                - Using AWS EC2 and using AWS CLI there to do the restore, because the RDS and other components are in the private VPC, therefore
-                                we cannot just use AWS CLI locally, which make unnecessary provisioning a EC2 just for that.<br/>
-                                - Using AwS Lambda with a self-created layer (Using Dockerfile) for import using python <br/>
-                                With the new Lambda, it can get an trigger from S3 whenever S3 get the new artifacts, it will run this Python script to restore the 
-                                new data to RDS<br/>
                                 
-                                Then last thing to do is schedule the pipeline x2 daily on Gitlab CICD<br/>
-                                Now you have a complete Gitlab Pipeline including #s3#gitlab_ci#aws_lambda#aws_aurora_rds#python#Docker<br/>
+                                The requirement to update a database daily led me to design an automated pipeline using GitLab CI/CD.<br/><br/>
+
+                                The use case involved generating a <strong>daily SQL dump</strong> from an <strong>actively changing Git repository</strong>.<br/>
+                                This repository holds crucial data needed by the INFOSEC team.<br/>
+                                However, due to access restrictions, the team cannot read the repository directly.<br/>
+                                To bridge this gap, the data needed to be uploaded to a GUI platform, accessible via user credentials.<br/><br/>
+
+                                <strong>Pipeline Overview Using GitLab CI/CD</strong><br/><br/>
+
+                                I leveraged GitLab CI/CD, which already hosts the repository, to build the following multi-step pipeline:<br/><br/>
+
+                                1. <strong>Repository Processing with Docker</strong><br/>
+                                A GitLab Runner spins up a Docker container to:<br/>
+                                - Clone the repository<br/>
+                                - Run an import script to process all YAML files<br/>
+                                - Convert the data into structured database tables<br/><br/>
+
+                                2. <strong>SQL Dump Creation</strong><br/>
+                                After the database is built inside the container, a SQL dump is generated and stored as an <strong>artifact</strong>.<br/><br/>
+
+                                3. <strong>Upload to AWS S3</strong><br/>
+                                A follow-up job uploads the SQL dump to an Amazon S3 bucket.<br/><br/>
+
+                                <strong>Restoring the Dump to AWS Aurora / RDS</strong><br/><br/>
+
+                                Once the file is in S3, it needs to be restored to an Aurora or RDS instance. There are two approaches:<br/><br/>
+
+                                - <strong>Option 1: AWS EC2 with CLI</strong><br/>
+                                Launch an EC2 instance inside the private VPC and restore using the AWS CLI.<br/>
+                                <em>Drawback:</em> This requires provisioning and managing a dedicated EC2 instance.<br/><br/>
+
+                                - <strong>Option 2: AWS Lambda Triggered by S3</strong> ✅<br/>
+                                Use an AWS Lambda function (with a custom layer built using a Dockerfile) that:<br/>
+                                - Is triggered automatically when a new dump arrives in S3<br/>
+                                - Runs a Python script to restore the database to Aurora/RDS<br/>
+                                <em>Benefit:</em> Serverless, scalable, and no need for EC2.<br/><br/>
+
+                                <strong>Final Step: Scheduled Automation</strong><br/>
+                                The pipeline is scheduled to run <strong>twice daily</strong> via GitLab CI/CD's cron scheduling.<br/><br/>
+
+                                <strong>Outcome</strong><br/>
+                                You now have a fully automated, production-ready pipeline that:<br/>
+                                - Extracts and transforms secured data<br/>
+                                - Uploads daily dumps to AWS S3<br/>
+                                - Automatically restores them to AWS Aurora via Lambda<br/><br/>
+
+                                <em>Tagged Technologies:</em> #s3 #gitlab_ci #aws_lambda #aws_aurora_rds #python #docker<br/>
                             </p>
                         </div>
                     </div>
