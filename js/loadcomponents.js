@@ -14,12 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-     const includes = {
+    const includes = {
     "docker-section": "cs-sections/docker.html",
     "git-section": "cs-sections/git.html",
     "vi-section": "cs-sections/vi.html",
     "restic-section": "cs-sections/restic.html",
     "ansible-section": "cs-sections/ansible.html",
+    "tf-section": "cs-sections/terraform.html",
+    "awscli-section": "cs-sections/awscli.html",
     "virsh-section": "cs-sections/virsh.html", 
     "postfix-section": "cs-sections/postfix.html",
     "openssl-section": "cs-sections/openssl.html",

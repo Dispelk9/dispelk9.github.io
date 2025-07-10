@@ -1,0 +1,33 @@
+<h5 class="text-left" id="AWS">AWS</h5>
+<p align="justify">
+    Initiate AWS CLI<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            export AWS_ACCESS_KEY_ID=<br/>
+            export AWS_SECRET_ACCESS_KEY=<br/>
+            export AWS_SESSION_TOKEN=<br/>
+        </code><br/>
+    </div>
+    Checking which RDS using which Secret in Secret Manager<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            aws rds help<br/>
+            aws rds describe-db-clusters<br/>
+            aws rds describe-db-clusters   --db-cluster-identifier    --region eu-central-1   --query 'DBClusters[0].DatabaseName'   --output text<br/>
+        </code><br/>
+    </div>
+    Create S3<br/>
+    <div class="alert alert-info" role="alert">
+        <code>
+            aws s3 help<br/>
+            aws s3api create-bucket   --bucket bucket_name --region eu-central-1   --create-bucket-configuration LocationConstraint=eu-central-1<br/>
+        </code><br/>
+    </div>
+    Get secret values from secretsmanager<br/>  
+    <div class="alert alert-info" role="alert">
+        <code>
+            aws secretsmanager get-secret-value   --secret-id  'rds!cluster-05149d24-558b-4ca6-b696-d568646a31ef' --region eu-central-1   --query SecretString   --output text<br/>
+            aws secretsmanager get-secret-value   --secret-id 'rds!cluster-05149d24-558b-4ca6-b696-d568646a31ef'   --query SecretString --output text | jq -r <br/>
+        </code><br/>
+    </div>
+</p>
