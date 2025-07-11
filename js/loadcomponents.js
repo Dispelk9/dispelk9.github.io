@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "virsh-section": "cs-sections/virsh.html", 
     "postfix-section": "cs-sections/postfix.html",
     "openssl-section": "cs-sections/openssl.html",
+    "checkmk-section": "cs-sections/checkmk.html",
     "misc-section": "cs-sections/misc.html",
     // Add more sections as needed
     };
