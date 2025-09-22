@@ -95,7 +95,16 @@ const Home: NextPage = () => {
             scrollEnd='bottom bottom-=40%'
             stagger={0.03}
           >
-          To thrive in this ever-changing domain and secure a role in the IT Industry
+          To thrive in this ever-changing domain
+          </ScrollFloat>
+          <ScrollFloat
+            animationDuration={1}
+            ease='back.inOut(2)'
+            scrollStart='center bottom+=50%'
+            scrollEnd='bottom bottom-=40%'
+            stagger={0.03}
+          >
+          and secure a role in the IT Industry
           </ScrollFloat>
           <ScrollFloat
             animationDuration={1}
@@ -152,7 +161,7 @@ const Home: NextPage = () => {
           />
         </div>
       </div>
-      <div style={{ height: 500 }} />
+      <div style={{ height: 200 }} />
       <div>
         <ScrollFloat
           animationDuration={1}
@@ -191,7 +200,7 @@ const Home: NextPage = () => {
               scrollEnd='bottom bottom-=40%'
               stagger={0.03}
             >
-              Interessted? Then let's connect :D
+              Interested? Then let's connect with me:D
             </ScrollFloat>
         </div>
       </div>
