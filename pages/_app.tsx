@@ -2,6 +2,8 @@ import type { AppProps } from 'next/app';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/globals.css';
 import Script from 'next/script';
+import BackToTop from "./components/BackToTop";
+
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,6 +13,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         strategy="afterInteractive"
       /> */}
       <Component {...pageProps} />
+      <BackToTop />
     </>
   );
 }

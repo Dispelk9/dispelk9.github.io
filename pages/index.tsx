@@ -43,7 +43,7 @@ const Home: NextPage = () => {
               />
         </div>
       </div>
-      <div style={{ height: 500 }} />
+      <div style={{ height: 250 }} />
       <div>
         <TextType 
               as="h1"
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
           whenever in resolving <strong>IT Ticket</strong> at service desks or in <strong>Life</strong>.
           </p>
       </div>  
-      <div style={{ height: 500 }} />
+      <div style={{ height: 250 }} />
       <div style={{ width: '100%', height: 600, position: 'relative' }}>
         <LiquidEther
           colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
@@ -95,18 +95,26 @@ const Home: NextPage = () => {
             scrollEnd='bottom bottom-=40%'
             stagger={0.03}
           >
-          To thrive in this ever-changing domain and secure a role in the IT Industry,
-          possessing a wide-ranging skill set is vital. 
+          To thrive in this ever-changing domain and secure a role in the IT Industry
+          </ScrollFloat>
+          <ScrollFloat
+            animationDuration={1}
+            ease='back.inOut(2)'
+            scrollStart='center bottom+=50%'
+            scrollEnd='bottom bottom-=40%'
+            stagger={0.03}
+          >
+          Possessing a wide-ranging skill set is vital
           </ScrollFloat>
         </div>
       </div>
-      <div style={{ height: 500 }} />
+      <div style={{ height: 250 }} />
       <div>
         <div>
           <TextType
             as="h1"
             style={{ margin: 0, fontSize: 'clamp(32px,6vw,80px)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-.02em' }}
-            text={['Ansible', 'Terraform','Python','Docker','']}
+            text={['Ansible', 'Terraform','Python','Docker','FastAPI']}
             typingSpeed={75}
             variableSpeed={false}
             onSentenceComplete={() => {}}
@@ -120,7 +128,7 @@ const Home: NextPage = () => {
           <TextType
             as="h1"
             style={{ margin: 0, fontSize: 'clamp(32px,6vw,80px)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-.02em' }}
-            text={['SMTP', 'DNS','Go','Znuny/OTRS','']}
+            text={['SMTP', 'DNS','Go','Znuny/OTRS','Flask']}
             typingSpeed={75}
             variableSpeed={false}
             onSentenceComplete={() => {}}
@@ -156,7 +164,7 @@ const Home: NextPage = () => {
           And many more...
         </ScrollFloat>
       </div>
-      <div style={{ height: 500 }} />
+      <div style={{ height: 200 }} />
       <div style={{ width: '100%', height: 600, position: 'relative' }}>
         <LiquidEther
           colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
@@ -183,7 +191,7 @@ const Home: NextPage = () => {
               scrollEnd='bottom bottom-=40%'
               stagger={0.03}
             >
-              Good work is good work wherever it is
+              Interessted? Then let's connect :D
             </ScrollFloat>
         </div>
       </div>
