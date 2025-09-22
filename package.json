@@ -5,9 +5,8 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "postbuild": "rm -rf docs && mv out docs && touch docs/.nojekyll",
         "start": "next start",
-        "serve": "serve docs -l 8080"
+        "serve": "serve out -l 8080"
     },
     "dependencies": {
         "bootstrap": "^5.3.8",
