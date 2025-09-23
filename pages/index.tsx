@@ -3,11 +3,44 @@ import LiquidEther from './components/LiquidEther'
 import TextType from './components/TextType';
 import Footer from './footer';
 import ScrollFloat from './components/ScrollTrigger';
+import StaggeredMenu from './components/StaggeredMenu';
 
 const Home: NextPage = () => {
+  const menuItems = [
+    { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
+    { label: 'Playground', ariaLabel: 'D9 Playground', link: 'https://analytical.dispelk9.de:8081/login' },
+    { label: 'Certcheck', ariaLabel: 'Fetch SMTP Certs', link: 'https://analytical.dispelk9.de:8443/' },
+    { label: 'SMTP', ariaLabel: 'Mailcow/Sogo/Docker', link: 'https://mail.dispelk9.de/' },
+    { label: 'CheckMK', ariaLabel: 'Monitoring', link: 'https://analytical.dispelk9.de/check_mk/login.py?_origtarget=index.py' },
+    { label: 'Terraform', ariaLabel: 'Cloud Infrastructure', link: 'https://app.terraform.io/session' },
+    { label: 'Hetzner', ariaLabel: 'Cloud Infrastructure', link: 'https://accounts.hetzner.com/login' },
+  ];
+
+
+  const socialItems = [
+    { label: 'GitHub', link: 'https://github.com/Dispelk9'},
+    { label: 'LinkedIn', link: 'https://www.linkedin.com/in/ai-viet-hoang-111093/' }
+  ];
 
   return (
     <div>
+      <div>
+        <StaggeredMenu
+          position="right"
+          items={menuItems}
+          socialItems={socialItems}
+          displaySocials={true}
+          displayItemNumbering={false}
+          menuButtonColor="#fff"
+          openMenuButtonColor="#0e0c0cff"
+          changeMenuColorOnOpen={true}
+          colors={['#B19EEF', '#5227FF']}
+          //logoUrl="../public/favicon_io/favicon-32x32.png"
+          accentColor="#ff6b6b"
+          onMenuOpen={() => console.log('Menu opened')}
+          onMenuClose={() => console.log('Menu closed')}
+        />
+      </div>
     <main  style={{ minHeight: '100vh', display: 'grid',  placeItems: 'center',  fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif', }}>
       
       <div style={{ width: '100%', height: 600, position: 'relative' }}>
@@ -34,7 +67,6 @@ const Home: NextPage = () => {
               className="m-0 text-[clamp(32px,6vw,80px)] font-extrabold leading-tight tracking-tight"
               text={["Dispelk9 x Ai Viet Hoang","present","Dispelk9 Playground"]}
               typingSpeed={75}
-              variableSpeed={false}
               onSentenceComplete={() => {}}
               pauseDuration={1500}
               showCursor={true}
@@ -49,7 +81,6 @@ const Home: NextPage = () => {
               className="m-0 text-[clamp(32px,6vw,80px)] font-extrabold leading-tight tracking-tight"
               text={["Introduction", ""]}
               typingSpeed={75}
-              variableSpeed={false}
               onSentenceComplete={() => {}}
               pauseDuration={1500}
               showCursor={true}
@@ -129,7 +160,6 @@ const Home: NextPage = () => {
             style={{ margin: 0, fontSize: 'clamp(32px,6vw,80px)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-.02em' }}
             text={['Bluecat', 'Apache','Nginx','Bind9','NS1']}
             typingSpeed={75}
-            variableSpeed={false}
             onSentenceComplete={() => {}}
             pauseDuration={1500}
             showCursor
@@ -142,7 +172,6 @@ const Home: NextPage = () => {
             style={{ margin: 0, fontSize: 'clamp(32px,6vw,80px)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-.02em' }}
             text={['Ansible', 'Terraform','Python','Docker','FastAPI']}
             typingSpeed={75}
-            variableSpeed={false}
             onSentenceComplete={() => {}}
             pauseDuration={1500}
             showCursor
@@ -155,7 +184,6 @@ const Home: NextPage = () => {
             style={{ margin: 0, fontSize: 'clamp(32px,6vw,80px)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-.02em' }}
             text={['SMTP', 'DNS','Go','Znuny/OTRS','Flask']}
             typingSpeed={75}
-            variableSpeed={false}
             onSentenceComplete={() => {}}
             pauseDuration={1500}
             showCursor
@@ -168,7 +196,6 @@ const Home: NextPage = () => {
             style={{ margin: 0, fontSize: 'clamp(28px,5.5vw,72px)', fontWeight: 800, lineHeight: 1.1 }}
             text={['Amazon Web Services', 'Hetzner','CheckMK','Next.js']}
             typingSpeed={75}
-            variableSpeed={false}
             onSentenceComplete={() => {}}
             pauseDuration={1500}
             showCursor
