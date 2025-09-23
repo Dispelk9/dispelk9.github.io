@@ -137,11 +137,11 @@ const Home: NextPage = () => {
             stagger={0.03}
             //textClassName="fs-75"
           >
-          Possess a wide-ranging skillset is vital
+          Be versatile. Build anything.
           </ScrollFloat>
         </div>
       </div>
-      <div style={{ height: 1000 }} />
+      <div style={{ height: 700 }} />
       <div>
         <div>
           <TextType
@@ -192,7 +192,7 @@ const Home: NextPage = () => {
           />
         </div>
       </div>
-      <div style={{ height: 200 }} />
+      <div style={{ height: 700 }} />
       <div>
         <ScrollFloat
           animationDuration={1}
