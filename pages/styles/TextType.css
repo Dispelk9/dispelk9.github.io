@@ -1,7 +1,7 @@
 .text-type {
   display: inline-block;
   white-space: pre-wrap;
-  color: black
+  color: inherit;
 }
 
 .text-type__cursor {

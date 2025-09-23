@@ -111,3 +111,8 @@ body {
   outline-offset: 2px;
 }
 
+.fs-75{
+  font-size: 75%; 
+  line-height: 1.1;
+}
+

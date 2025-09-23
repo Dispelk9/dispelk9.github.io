@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, ReactNode, RefObject } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import './ScrollTrigger.module.css';
+//import './ScrollTrigger.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 

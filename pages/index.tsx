@@ -1,16 +1,15 @@
 import type { NextPage } from 'next';
 import LiquidEther from './components/LiquidEther'
 import TextType from './components/TextType';
-import CardNavBar from './navbar'
 import Footer from './footer';
 import ScrollFloat from './components/ScrollTrigger';
 
 const Home: NextPage = () => {
-  return (
-    <main  style={{ minHeight: '100vh', display: 'grid',  placeItems: 'center',  fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif', }}>
-      {/* Nav on top */}
-      {/* <CardNavBar /> */}
 
+  return (
+    <div>
+    <main  style={{ minHeight: '100vh', display: 'grid',  placeItems: 'center',  fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif', }}>
+      
       <div style={{ width: '100%', height: 600, position: 'relative' }}>
         <LiquidEther
           colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
@@ -33,7 +32,7 @@ const Home: NextPage = () => {
           <TextType 
               as="h1"
               className="m-0 text-[clamp(32px,6vw,80px)] font-extrabold leading-tight tracking-tight"
-              text={["Dispelk9 x Ai Viet Hoang", "Welcome to Dispelk9"]}
+              text={["Dispelk9 x Ai Viet Hoang","present","Dispelk9 Playground"]}
               typingSpeed={75}
               variableSpeed={false}
               onSentenceComplete={() => {}}
@@ -68,7 +67,7 @@ const Home: NextPage = () => {
           whenever in resolving <strong>IT Ticket</strong> at service desks or in <strong>Life</strong>.
           </p>
       </div>  
-      <div style={{ height: 250 }} />
+      <div style={{ height: 200 }} />
       <div style={{ width: '100%', height: 600, position: 'relative' }}>
         <LiquidEther
           colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
@@ -94,31 +93,49 @@ const Home: NextPage = () => {
             scrollStart='center bottom+=50%'
             scrollEnd='bottom bottom-=40%'
             stagger={0.03}
+            textClassName="fs-75"
           >
-          To thrive in this ever-changing domain
+          To thrive in this infinite domain
           </ScrollFloat>
+          <div style={{ height: 100 }} />
           <ScrollFloat
             animationDuration={1}
             ease='back.inOut(2)'
             scrollStart='center bottom+=50%'
             scrollEnd='bottom bottom-=40%'
             stagger={0.03}
+            textClassName="fs-75"
           >
           and secure a role in the IT Industry
           </ScrollFloat>
+          <div style={{ height: 100 }} />
           <ScrollFloat
             animationDuration={1}
             ease='back.inOut(2)'
             scrollStart='center bottom+=50%'
             scrollEnd='bottom bottom-=40%'
             stagger={0.03}
+            textClassName="fs-75"
           >
           Possessing a wide-ranging skill set is vital
           </ScrollFloat>
         </div>
       </div>
-      <div style={{ height: 250 }} />
+      <div style={{ height: 500 }} />
       <div>
+        <div>
+          <TextType
+            as="h1"
+            style={{ margin: 0, fontSize: 'clamp(32px,6vw,80px)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-.02em' }}
+            text={['Bluecat', 'Apache','Nginx','Bind9','NS1']}
+            typingSpeed={75}
+            variableSpeed={false}
+            onSentenceComplete={() => {}}
+            pauseDuration={1500}
+            showCursor
+            cursorCharacter="_"
+          />
+        </div>
         <div>
           <TextType
             as="h1"
@@ -132,7 +149,6 @@ const Home: NextPage = () => {
             cursorCharacter="_"
           />
         </div>
-
         <div>
           <TextType
             as="h1"
@@ -146,10 +162,9 @@ const Home: NextPage = () => {
             cursorCharacter="_"
           />
         </div>
-
         <div>
           <TextType
-            as="h3"
+            as="h1"
             style={{ margin: 0, fontSize: 'clamp(28px,5.5vw,72px)', fontWeight: 800, lineHeight: 1.1 }}
             text={['Amazon Web Services', 'Hetzner','CheckMK','Next.js']}
             typingSpeed={75}
@@ -173,6 +188,17 @@ const Home: NextPage = () => {
           And many more...
         </ScrollFloat>
       </div>
+      <div style={{ height: 200 }} />
+      <p>
+          This is D9 playground: My Source for IT Knowledge and Innovation<br/><br/>
+
+          In today's rapidly evolving digital landscape, 
+          staying informed about the latest developments in information technology 
+          is more important than ever.<br/>
+          Whether you're a seasoned IT professional, an aspiring tech enthusiast, 
+          or a business leader looking to leverage technology for competitive advantage,<br/>
+          my playground is here to provide you with the knowledge and insights you need.
+      </p>
       <div style={{ height: 200 }} />
       <div style={{ width: '100%', height: 600, position: 'relative' }}>
         <LiquidEther
@@ -199,13 +225,15 @@ const Home: NextPage = () => {
               scrollStart='center bottom+=50%'
               scrollEnd='bottom bottom-=40%'
               stagger={0.03}
+              textClassName="fs-75"
             >
-              Interested? Then let's connect with me:D
+            Let's connect, my fellow IT professionals
             </ScrollFloat>
         </div>
       </div>
       <Footer/>
     </main>
+    </div>
   );
 };
 
