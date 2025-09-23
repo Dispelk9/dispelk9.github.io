@@ -98,7 +98,7 @@ const Home: NextPage = () => {
           whenever in resolving <strong>IT Ticket</strong> at service desks or in <strong>Life</strong>.
           </p>
       </div>  
-      <div style={{ height: 200 }} />
+      <div style={{ height: 1000 }} />
       <div style={{ width: '100%', height: 600, position: 'relative' }}>
         <LiquidEther
           colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
@@ -124,35 +124,24 @@ const Home: NextPage = () => {
             scrollStart='center bottom+=50%'
             scrollEnd='bottom bottom-=40%'
             stagger={0.03}
-            textClassName="fs-75"
+            //textClassName="fs-75"
           >
           To thrive in this infinite domain
           </ScrollFloat>
-          <div style={{ height: 100 }} />
+          <div style={{ height: 500 }} />
           <ScrollFloat
             animationDuration={1}
             ease='back.inOut(2)'
             scrollStart='center bottom+=50%'
             scrollEnd='bottom bottom-=40%'
             stagger={0.03}
-            textClassName="fs-75"
+            //textClassName="fs-75"
           >
-          and secure a role in the IT Industry
-          </ScrollFloat>
-          <div style={{ height: 100 }} />
-          <ScrollFloat
-            animationDuration={1}
-            ease='back.inOut(2)'
-            scrollStart='center bottom+=50%'
-            scrollEnd='bottom bottom-=40%'
-            stagger={0.03}
-            textClassName="fs-75"
-          >
-          Possessing a wide-ranging skill set is vital
+          Possess a wide-ranging skillset is vital
           </ScrollFloat>
         </div>
       </div>
-      <div style={{ height: 500 }} />
+      <div style={{ height: 1000 }} />
       <div>
         <div>
           <TextType
