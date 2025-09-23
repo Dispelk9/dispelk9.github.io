@@ -137,7 +137,18 @@ const Home: NextPage = () => {
             stagger={0.03}
             //textClassName="fs-75"
           >
-          Be versatile. Build anything.
+          Be versatile.
+          </ScrollFloat>
+          <div style={{ height: 500 }} />
+          <ScrollFloat
+            animationDuration={1}
+            ease='back.inOut(2)'
+            scrollStart='center bottom+=50%'
+            scrollEnd='bottom bottom-=40%'
+            stagger={0.03}
+            //textClassName="fs-75"
+          >
+          Stay valuable.
           </ScrollFloat>
         </div>
       </div>
@@ -147,7 +158,7 @@ const Home: NextPage = () => {
           <TextType
             as="h1"
             style={{ margin: 0, fontSize: 'clamp(32px,6vw,80px)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-.02em' }}
-            text={['Bluecat', 'Apache','Nginx','Bind9','NS1']}
+            text={['Bluecat', 'Apache','Nginx','Bind9','NS1','Github Actions']}
             typingSpeed={75}
             onSentenceComplete={() => {}}
             pauseDuration={1500}
@@ -159,7 +170,7 @@ const Home: NextPage = () => {
           <TextType
             as="h1"
             style={{ margin: 0, fontSize: 'clamp(32px,6vw,80px)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-.02em' }}
-            text={['Ansible', 'Terraform','Python','Docker','FastAPI']}
+            text={['Ansible', 'Terraform','Python','Docker','FastAPI','Gitlab CI']}
             typingSpeed={75}
             onSentenceComplete={() => {}}
             pauseDuration={1500}
@@ -171,7 +182,7 @@ const Home: NextPage = () => {
           <TextType
             as="h1"
             style={{ margin: 0, fontSize: 'clamp(32px,6vw,80px)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-.02em' }}
-            text={['SMTP', 'DNS','Go','Znuny/OTRS','Flask']}
+            text={['SMTP', 'DNS','Go','Znuny/OTRS','Flask','PGP']}
             typingSpeed={75}
             onSentenceComplete={() => {}}
             pauseDuration={1500}
