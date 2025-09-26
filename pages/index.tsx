@@ -98,7 +98,7 @@ const Home: NextPage = () => {
           whenever in resolving <strong>IT Ticket</strong> at service desks or in <strong>Life</strong>.
           </p>
       </div>  
-      <div style={{ height: 800 }} />
+      <div style={{ height: 250 }} />
       <div style={{ width: '100%', height: 600, position: 'relative' }}>
         <LiquidEther
           colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
@@ -151,7 +151,7 @@ const Home: NextPage = () => {
           </ScrollFloat>
         </div>
       </div>
-      <div style={{ height: 700 }} />
+      <div style={{ height: 500 }} />
       <div>
         <div>
           <TextType
@@ -202,7 +202,7 @@ const Home: NextPage = () => {
           />
         </div>
       </div>
-      <div style={{ height: 700 }} />
+      <div style={{ height: 500 }} />
       <div>
         <ScrollFloat
           animationDuration={1}
