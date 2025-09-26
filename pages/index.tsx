@@ -65,7 +65,7 @@ const Home: NextPage = () => {
           <TextType 
               as="h1"
               className="m-0 text-[clamp(32px,6vw,80px)] font-extrabold leading-tight tracking-tight"
-              text={["Dispelk9 x Ai Viet Hoang","present","Dispelk9 Playground"]}
+              text={["Dispelk9 x Ai Viet Hoang","present","D9 Playground"]}
               typingSpeed={75}
               onSentenceComplete={() => {}}
               pauseDuration={1500}
@@ -98,7 +98,7 @@ const Home: NextPage = () => {
           whenever in resolving <strong>IT Ticket</strong> at service desks or in <strong>Life</strong>.
           </p>
       </div>  
-      <div style={{ height: 1000 }} />
+      <div style={{ height: 800 }} />
       <div style={{ width: '100%', height: 600, position: 'relative' }}>
         <LiquidEther
           colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
@@ -124,29 +124,28 @@ const Home: NextPage = () => {
             scrollStart='center bottom+=50%'
             scrollEnd='bottom bottom-=40%'
             stagger={0.03}
-            //textClassName="fs-75"
+            textClassName="fs-75"
           >
           To thrive in this infinite domain
           </ScrollFloat>
-          <div style={{ height: 500 }} />
+          {/* <div style={{ height: 50 }} /> */}
           <ScrollFloat
             animationDuration={1}
             ease='back.inOut(2)'
             scrollStart='center bottom+=50%'
             scrollEnd='bottom bottom-=40%'
             stagger={0.03}
-            //textClassName="fs-75"
+            textClassName="fs-75"
           >
           Be versatile.
           </ScrollFloat>
-          <div style={{ height: 500 }} />
           <ScrollFloat
             animationDuration={1}
             ease='back.inOut(2)'
             scrollStart='center bottom+=50%'
             scrollEnd='bottom bottom-=40%'
             stagger={0.03}
-            //textClassName="fs-75"
+            textClassName="fs-75"
           >
           Stay valuable.
           </ScrollFloat>

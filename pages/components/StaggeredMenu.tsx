@@ -371,14 +371,15 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       </div>
       <header className="staggered-menu-header" aria-label="Main navigation header">
         <div className="sm-logo" aria-label="Logo">
-          <img
+          Dispelk9
+          {/* <img
             //src={logoUrl || '/favicon_io/favicon-32x32.png'}
             alt="Dispelk9"
             className="sm-logo-img"
             draggable={false}
             width={110}
             height={24}
-          />
+          /> */}
         </div>
         <button
           ref={toggleBtnRef}
