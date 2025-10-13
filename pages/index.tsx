@@ -253,7 +253,8 @@ const Home: NextPage = () => {
               stagger={0.03}
               textClassName="fs-75"
             >
-            Let's connect, my fellow IT professionals
+            Let's connect<br/>
+            My fellow IT professionals<br/>
             </ScrollFloat>
         </div>
       </div>
