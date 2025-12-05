@@ -8,7 +8,7 @@ import StaggeredMenu from './components/StaggeredMenu';
 const Home: NextPage = () => {
   const menuItems = [
     { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
-    { label: 'Playground', ariaLabel: 'D9 Playground', link: 'https://analytical.dispelk9.de:8081/login' },
+    { label: 'Playground', ariaLabel: 'D9 Playground', link: 'https://demo.dispelk9.de' },
     { label: 'Certcheck', ariaLabel: 'Fetch SMTP Certs', link: 'https://analytical.dispelk9.de:8443/' },
     { label: 'SMTP', ariaLabel: 'Mailcow/Sogo/Docker', link: 'https://mail.dispelk9.de/' },
     { label: 'CheckMK', ariaLabel: 'Monitoring', link: 'https://analytical.dispelk9.de/check_mk/login.py?_origtarget=index.py' },
