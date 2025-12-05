@@ -14,6 +14,7 @@ const Home: NextPage = () => {
     { label: 'CheckMK', ariaLabel: 'Monitoring', link: 'https://analytical.dispelk9.de/check_mk/login.py?_origtarget=index.py' },
     { label: 'Terraform', ariaLabel: 'Cloud Infrastructure', link: 'https://app.terraform.io/session' },
     { label: 'Hetzner', ariaLabel: 'Cloud Infrastructure', link: 'https://accounts.hetzner.com/login' },
+    { label: 'Cloudflare', ariaLabel: 'Cloud Infrastructure', link: 'https://dash.cloudflare.com/login' },
   ];
 
 
