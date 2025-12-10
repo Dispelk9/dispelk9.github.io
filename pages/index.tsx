@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 
   const socialItems = [
     { label: 'GitHub', link: 'https://github.com/Dispelk9'},
-    { label: 'LinkedIn', link: 'https://www.linkedin.com/in/ai-viet-hoang-111093/' }
+    { label: 'LinkedIn', link: 'https://www.linkedin.com/in/ai-viet-hoang-111093/' },
     { label: 'Credly', link: 'https://www.credly.com/users/ai-viet-hoang/badges#credly' }
   ];
 
