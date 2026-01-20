@@ -7,6 +7,7 @@ import './styles/ScrollTrigger.css';
 import './styles/globals.css';
 import './styles/StaggeredMenu.css';
 import './styles/TextType.css';
+import './styles/LogoLoop.css';
 
 
 

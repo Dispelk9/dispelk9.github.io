@@ -4,6 +4,8 @@ import TextType from './components/TextType';
 import Footer from './footer';
 import ScrollFloat from './components/ScrollTrigger';
 import StaggeredMenu from './components/StaggeredMenu';
+import LogoLoop from './components/LogoLoop';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,SiAnsible,SiTerraform,SiPython,SiGo,SiGithub,SiGitlab } from 'react-icons/si';
 
 const Home: NextPage = () => {
   const menuItems = [
@@ -23,6 +25,26 @@ const Home: NextPage = () => {
     { label: 'LinkedIn', link: 'https://www.linkedin.com/in/ai-viet-hoang-111093/' },
     { label: 'Credly', link: 'https://www.credly.com/users/ai-viet-hoang/badges#credly' },
   ];
+
+  const techLogos = [
+    { node: <SiReact />, title: "React", href: "" },
+    { node: <SiTerraform />, title: "Terraform", href: "" },
+    { node: <SiNextdotjs />, title: "Next.js", href: "" },
+    { node: <SiTypescript />, title: "TypeScript", href: "" },
+    { node: <SiAnsible />, title: "Ansible", href: "" },
+    { node: <SiGithub />, title: "Github", href: "" },
+    { node: <SiGo />, title: "Golang", href: "" },
+    { node: <SiGitlab />, title: "Gitlab", href: "" },
+    { node: <SiTailwindcss />, title: "Tailwind CSS", href: "" },
+    { node: <SiPython />, title: "Python", href: "" },
+  ];
+
+  // Alternative with image sources
+  // const imageLogos = [
+  //   { src: "/logos/company1.png", alt: "Company 1", href: "https://company1.com" },
+  //   { src: "/logos/company2.png", alt: "Company 2", href: "https://company2.com" },
+  //   { src: "/logos/company3.png", alt: "Company 3", href: "https://company3.com" },
+  // ];
 
   return (
     <div>
@@ -227,6 +249,33 @@ const Home: NextPage = () => {
           or a business leader looking to leverage technology for competitive advantage,<br/>
           my playground is here to provide you with the knowledge and insights you need.
       </p>
+      <div style={{ height: 200 }} />
+      <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
+            {/* Basic horizontal loop */}
+            <LogoLoop
+              logos={techLogos}
+              speed={100}
+              direction="left"
+              logoHeight={60}
+              gap={60}
+              hoverSpeed={0}
+              scaleOnHover
+              fadeOut
+              fadeOutColor="#ffffff"
+              ariaLabel="Technology partners"
+            />
+            
+            {/* Vertical loop with deceleration on hover */}
+            {/* <LogoLoop
+              logos={techLogos}
+              speed={100}
+              direction="left"
+              logoHeight={60}
+              gap={60}
+              hoverSpeed={0}
+              fadeOut
+            /> */}
+          </div>
       <div style={{ height: 200 }} />
       <div style={{ width: '100%', height: 600, position: 'relative' }}>
         <LiquidEther
