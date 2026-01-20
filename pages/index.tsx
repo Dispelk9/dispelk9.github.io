@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
-import LiquidEther from './components/LiquidEther'
-import TextType from './components/TextType';
+import LiquidEther from '../components/LiquidEther'
+import TextType from '../components/TextType';
 import Footer from './footer';
-import ScrollFloat from './components/ScrollTrigger';
-import StaggeredMenu from './components/StaggeredMenu';
-import LogoLoop from './components/LogoLoop';
+import ScrollFloat from '../components/ScrollTrigger';
+import StaggeredMenu from '../components/StaggeredMenu';
+import LogoLoop from '../components/LogoLoop';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,SiAnsible,SiTerraform,SiPython,SiGo,SiGithub,SiGitlab } from 'react-icons/si';
 
 const Home: NextPage = () => {
@@ -276,7 +276,6 @@ const Home: NextPage = () => {
               fadeOut
             /> */}
           </div>
-      <div style={{ height: 200 }} />
       <div style={{ width: '100%', height: 600, position: 'relative' }}>
         <LiquidEther
           colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}

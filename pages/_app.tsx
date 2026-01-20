@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import BackToTop from "./components/BackToTop";
+import BackToTop from "../components/BackToTop";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/LiquidEther.css';
 import './styles/ScrollTrigger.css';
