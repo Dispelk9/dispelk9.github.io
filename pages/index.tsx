@@ -5,7 +5,7 @@ import Footer from './footer';
 import ScrollFloat from '../components/ScrollTrigger';
 import StaggeredMenu from '../components/StaggeredMenu';
 import LogoLoop from '../components/LogoLoop';
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,SiAnsible,SiTerraform,SiPython,SiGo,SiGithub,SiGitlab } from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiAnsible, SiTerraform, SiPython, SiGo, SiGithub, SiGitlab, SiAmazonwebservices, SiHetzner,SiDocker } from 'react-icons/si';
 
 const Home: NextPage = () => {
   const menuItems = [
@@ -37,6 +37,9 @@ const Home: NextPage = () => {
     { node: <SiGitlab />, title: "Gitlab", href: "" },
     { node: <SiTailwindcss />, title: "Tailwind CSS", href: "" },
     { node: <SiPython />, title: "Python", href: "" },
+    { node: <SiAmazonwebservices />, title: "AWS", href: "" },
+    { node: <SiHetzner />, title: "Hetzner", href: "" },
+    { node: <SiDocker />, title: "Docker", href: "" },
   ];
 
   // Alternative with image sources
