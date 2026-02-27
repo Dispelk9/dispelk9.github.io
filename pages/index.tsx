@@ -17,6 +17,7 @@ const Home: NextPage = () => {
     { label: 'Terraform', ariaLabel: 'Cloud Infrastructure', link: 'https://app.terraform.io/session' },
     { label: 'Hetzner', ariaLabel: 'Cloud Infrastructure', link: 'https://accounts.hetzner.com/login' },
     { label: 'Cloudflare', ariaLabel: 'Cloud Infrastructure', link: 'https://dash.cloudflare.com/login' },
+    { label: 'Netbox', ariaLabel: 'Network SoT', link: 'https://netbox.dispelk9.de' },
   ];
 
 
